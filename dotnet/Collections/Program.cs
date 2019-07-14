@@ -1,12 +1,12 @@
-using System;
+﻿using System;
 
-namespace dotnet.BeginningCshCollections.DaysOfWeek
+namespace Collections
 {
     class Program
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Hello World!");
         }
     }
 }
