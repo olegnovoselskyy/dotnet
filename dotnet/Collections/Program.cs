@@ -8,20 +8,35 @@ namespace Collections
         {       
             string[] daysOfWeek =
             {
-                "Monday",
-                "Tuesday",
-                "Wednesday",
-                "Thursday",
-                "Friday",
-                "Saturday",
-                "Sunday"
+                "MONDAY",
+                "TUESDAY",
+                "WEDNESDAY",
+                "THURSDAY",
+                "FRIDAY",
+                "SATURDAY",
+                "SUNDAY"
             };
 
-            Console.WriteLine("What day is it?");
-            int inputtedDay = int.Parse(Console.ReadLine()) - 1;
+            var replace = "LAST DAY OF DIRT";
+            int index = 0;
 
-            string chosenDay = daysOfWeek[inputtedDay];
-            Console.WriteLine($"Today is {chosenDay}");
+            foreach (string day in daysOfWeek)
+            {
+                if (index != 2)
+                {
+                    daysOfWeek[index] = replace;
+                }
+                Console.WriteLine(daysOfWeek[index]);
+
+                index++;
+            }
+
+            Console.WriteLine();
+            
+
+            Console.WriteLine("What day is it?");
+            int indexDay = int.Parse(Console.ReadLine()) - 1;
+            Console.WriteLine($"Today is {daysOfWeek[indexDay]}");
         }
     }
 }
