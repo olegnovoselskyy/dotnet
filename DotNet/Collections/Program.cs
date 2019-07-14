@@ -18,12 +18,20 @@ namespace Collections
                 "Sunday"
             };
 
-            daysOfWeek[6] = "Day of the LORD!"; 
-
+            //         daysOfWeek[6] = "Day of the LORD!"; 
+            int count = 0;
             foreach (string day in daysOfWeek)
             {
-                Console.WriteLine(day);
+                
+                if (count != 2)
+                {
+                    daysOfWeek[count] = "LAST DAY OF DIRT!";
+                }
+                
+                Console.WriteLine(daysOfWeek[count]);
+                count++;
             }
+         
 
             //Console.WriteLine(daysOfWeek[1]);
 
