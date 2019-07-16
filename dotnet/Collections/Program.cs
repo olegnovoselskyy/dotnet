@@ -64,18 +64,26 @@ namespace Collections
             };
 
             Country selectedCountry = countries.ContainsKey(norway.Code) ? countries[norway.Code] : null;
+            Country selectedCountryTry = countries.TryGetValue("MUS", out Country country2) ? country2 : null;
 
             if (selectedCountry != null)
                 Console.WriteLine($"Selected Country: {selectedCountry.Name}");
+
+
+            if (selectedCountryTry != null)
+            {
+                Console.WriteLine($"Attempted Country: {selectedCountry.Name}");
+            }
+            else
+            {
+                Console.WriteLine($"Attempted Country is not in the dictionary");
+            }
+
 
             Console.WriteLine();
             Console.WriteLine("All Countries:");
             foreach (var country in countries.Values) 
                 Console.WriteLine(country.Name);
-            
-
-
-
         }
     }
 }
