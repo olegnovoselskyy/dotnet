@@ -5,38 +5,48 @@ namespace Collections
     class Program
     {
         static void Main(string[] args)
-        {       
-            string[] daysOfWeek =
+        {
+            //string[] daysOfWeek =
+            //{
+            //    "MONDAY",
+            //    "TUESDAY",
+            //    "WEDNESDAY",
+            //    "THURSDAY",
+            //    "FRIDAY",
+            //    "SATURDAY",
+            //    "SUNDAY"
+            //};
+
+            //var replace = "LAST DAY OF DIRT";
+            //int index = 0;
+
+            //foreach (string day in daysOfWeek)
+            //{
+            //    if (index != 2)
+            //    {
+            //        daysOfWeek[index] = replace;
+            //    }
+            //    Console.WriteLine(daysOfWeek[index]);
+
+            //    index++;ss
+            //}
+
+            //Console.WriteLine();
+
+
+            //Console.WriteLine("What day is it?");
+            //int indexDay = int.Parse(Console.ReadLine()) - 1;
+            //Console.WriteLine($"Today is {daysOfWeek[indexDay]}");
+
+            string filePath = @"C:\Users\amid2\source\repos\dotnet\dotnet\Collections\Pop by Largest Final.csv";
+            CsvReader reader = new CsvReader(filePath);
+
+            Country[] countries = reader.ReadFirstNCountries(10);
+
+            foreach (Country country in countries)
             {
-                "MONDAY",
-                "TUESDAY",
-                "WEDNESDAY",
-                "THURSDAY",
-                "FRIDAY",
-                "SATURDAY",
-                "SUNDAY"
-            };
-
-            var replace = "LAST DAY OF DIRT";
-            int index = 0;
-
-            foreach (string day in daysOfWeek)
-            {
-                if (index != 2)
-                {
-                    daysOfWeek[index] = replace;
-                }
-                Console.WriteLine(daysOfWeek[index]);
-
-                index++;
+                Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
-
-            Console.WriteLine();
-            
-
-            Console.WriteLine("What day is it?");
-            int indexDay = int.Parse(Console.ReadLine()) - 1;
-            Console.WriteLine($"Today is {daysOfWeek[indexDay]}");
         }
     }
 }
