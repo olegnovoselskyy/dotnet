@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Collections
 {
@@ -41,7 +42,7 @@ namespace Collections
             string filePath = @"C:\Users\amid2\source\repos\dotnet\dotnet\Collections\Pop by Largest Final.csv";
             CsvReader reader = new CsvReader(filePath);
 
-            Country[] countries = reader.ReadFirstNCountries(10);
+            List<Country> countries = reader.ReadAllCountries();
 
             foreach (Country country in countries)
             {
