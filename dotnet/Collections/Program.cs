@@ -39,6 +39,19 @@ namespace Collections
             //int indexDay = int.Parse(Console.ReadLine()) - 1;
             //Console.WriteLine($"Today is {daysOfWeek[indexDay]}");
 
+            string filePath = @"C:\Users\amid2\source\repos\dotnet\dotnet\Collections\Pop by Largest Final.csv";
+            CsvReader reader = new CsvReader(filePath);
+            Dictionary<string, Country> countries = reader.ReadAllCountries();
+
+            Console.Write("Enter country code: ");
+            string countryInput = Console.ReadLine();
+
+            bool gotCountry = countries.TryGetValue(countryInput, out Country country);
+            if (!gotCountry)
+                Console.WriteLine($"The records must be incomplete. Country code: {countryInput} does not exist.");
+            else
+                Console.WriteLine($"{country.Name} has population {PopulationFormatter.FormatPopulation(country.Population)}");
+
             //string filePath = @"C:\Users\amid2\source\repos\dotnet\dotnet\Collections\Pop by Largest Final.csv";
             //CsvReader reader = new CsvReader(filePath);
 
@@ -54,36 +67,36 @@ namespace Collections
             //}
             //Console.WriteLine($"{countries.Count} countries");
 
-            Country norway = new Country("Norway", "NOR", "Europe", 5_282_223);
-            Country finland = new Country("Finland", "FIN", "Europe", 5_282_223);
+            //Country norway = new Country("Norway", "NOR", "Europe", 5_282_223);
+            //Country finland = new Country("Finland", "FIN", "Europe", 5_282_223);
 
-            var countries = new Dictionary<string, Country>
-            {
-                { norway.Code, norway },
-                { finland.Code, finland }
-            };
+            //var countries = new Dictionary<string, Country>
+            //{
+            //    { norway.Code, norway },
+            //    { finland.Code, finland }
+            //};
 
-            Country selectedCountry = countries.ContainsKey(norway.Code) ? countries[norway.Code] : null;
-            Country selectedCountryTry = countries.TryGetValue("MUS", out Country country2) ? country2 : null;
+            //Country selectedCountry = countries.ContainsKey(norway.Code) ? countries[norway.Code] : null;
+            //Country selectedCountryTry = countries.TryGetValue("MUS", out Country country2) ? country2 : null;
 
-            if (selectedCountry != null)
-                Console.WriteLine($"Selected Country: {selectedCountry.Name}");
-
-
-            if (selectedCountryTry != null)
-            {
-                Console.WriteLine($"Attempted Country: {selectedCountry.Name}");
-            }
-            else
-            {
-                Console.WriteLine($"Attempted Country is not in the dictionary");
-            }
+            //if (selectedCountry != null)
+            //    Console.WriteLine($"Selected Country: {selectedCountry.Name}");
 
 
-            Console.WriteLine();
-            Console.WriteLine("All Countries:");
-            foreach (var country in countries.Values) 
-                Console.WriteLine(country.Name);
+            //if (selectedCountryTry != null)
+            //{
+            //    Console.WriteLine($"Attempted Country: {selectedCountry.Name}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine($"Attempted Country is not in the dictionary");
+            //}
+
+
+            //Console.WriteLine();
+            //Console.WriteLine("All Countries:");
+            //foreach (var country in countries.Values) 
+            //    Console.WriteLine(country.Name);
         }
     }
 }
