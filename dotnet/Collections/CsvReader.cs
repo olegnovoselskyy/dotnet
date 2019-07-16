@@ -14,9 +14,9 @@ namespace Collections
             this._csvFilePath = csvFilePath;
         }
 
-        public Dictionary<string, Country>  ReadAllCountries()
+        public List<Country> ReadAllCountries()
         {
-            var countries = new Dictionary<string, Country>();
+            List<Country> countries = new List<Country>();
 
             using (StreamReader sr = new StreamReader(_csvFilePath))
             {
@@ -26,8 +26,7 @@ namespace Collections
                 string csvLine;
                 while((csvLine = sr.ReadLine()) != null)
                 {
-                    Country country = (ReadCountyFromCsvLine(csvLine));
-                    countries.Add(country.Code, country);
+                    countries.Add(ReadCountyFromCsvLine(csvLine));
                 }
             }
 
