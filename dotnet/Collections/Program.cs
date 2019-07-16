@@ -79,11 +79,19 @@ namespace Collections
                 return;
             }
 
-            int maxToDisplay = Math.Min(countryCountInput, countries.Count);
-            for (int i = 0; i < maxToDisplay; i++)
+            int maxToDisplay = countryCountInput;
+            for (int i = countries.Count - 1; i >= 0; i--)
             {
+                int displayIndex = countries.Count - 1 - i;
+                if(displayIndex > 0 && (displayIndex % maxToDisplay == 0))
+                {
+                    Console.WriteLine("Hit return to continue, anything else to quit>");
+                    if (Console.ReadLine() != "")
+                        break;
+                }
+
                 Country country = countries[i];
-                Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
+                Console.WriteLine($"{displayIndex+1}: {PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
 
             //Country norway = new Country("Norway", "NOR", "Europe", 5_282_223);
