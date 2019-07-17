@@ -8,7 +8,7 @@ namespace Collections
         {
 
 
-            string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal";
+            string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
 
             CsvReader reader = new CsvReader(filePath);
 
@@ -16,6 +16,7 @@ namespace Collections
 
             foreach (Country country in countries)
             {
+                
                 Console.WriteLine($"{country.Population} : {country.Name}");
             }
 
