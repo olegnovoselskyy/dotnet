@@ -7,7 +7,17 @@ namespace Collections
         static void Main(string[] args)
         {
 
-            Console.WriteLine("Testing Moving the repo");
+
+            string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal";
+
+            CsvReader reader = new CsvReader(filePath);
+
+            Country[] countries = reader.ReadFirstNCountries(10);
+
+            foreach (Country country in countries)
+            {
+                Console.WriteLine($"{country.Population} : {country.Name}");
+            }
 
             #region Old Code
 
