@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Collections
 {
@@ -7,20 +8,24 @@ namespace Collections
         static void Main(string[] args)
         {
 
+            List<string> daysOfWeek = new List<string>();
 
-            string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
-
-            CsvReader reader = new CsvReader(filePath);
-
-            Country[] countries = reader.ReadFirstNCountries(10);
-
-            foreach (Country country in countries)
-            {
-                
-                Console.WriteLine($"{country.Population} : {country.Name}");
-            }
+            List<int> ints = new List<int>();
 
             #region Old Code
+
+
+            //string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
+
+            //CsvReader reader = new CsvReader(filePath);
+
+            //Country[] countries = reader.ReadFirstNCountries(10);
+
+            //foreach (Country country in countries)
+            //{
+
+            //    Console.WriteLine($"{country.Population} : {country.Name}");
+            //}
 
             //string[] daysOfWeek =
             //{
