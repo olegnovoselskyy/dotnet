@@ -9,8 +9,16 @@ namespace Collections
         {
 
             List<string> daysOfWeek = new List<string>();
+            daysOfWeek.Add("Monday");
+            daysOfWeek.Add("Tuesday");
+            daysOfWeek.Add("Wednesday");
+            daysOfWeek.Add("Thursday");
+            daysOfWeek.Add("Friday");
+            daysOfWeek.Add("Saturday");
+            daysOfWeek.Add("Sunday");
 
-            List<int> ints = new List<int>();
+
+            //List<int> ints = new List<int>();
 
             #region Old Code
 
