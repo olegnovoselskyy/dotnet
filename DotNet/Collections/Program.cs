@@ -8,17 +8,21 @@ namespace Collections
         static void Main(string[] args)
         {
 
-            List<string> daysOfWeek = new List<string>();
-            daysOfWeek.Add("Monday");
-            daysOfWeek.Add("Tuesday");
-            daysOfWeek.Add("Wednesday");
-            daysOfWeek.Add("Thursday");
-            daysOfWeek.Add("Friday");
-            daysOfWeek.Add("Saturday");
-            daysOfWeek.Add("Sunday");
+
+            string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
+
+            CsvReader reader = new CsvReader(filePath);
+
+            var countries = reader.ReadAllCountries();
+
+            foreach (Country country in countries)
+            {
+
+                Console.WriteLine($"{country.Population} : {country.Name}");
+            }
 
 
-            //List<int> ints = new List<int>();
+
 
             #region Old Code
 
@@ -34,6 +38,17 @@ namespace Collections
 
             //    Console.WriteLine($"{country.Population} : {country.Name}");
             //}
+
+
+            //List<int> ints = new List<int>();
+            //List<string> daysOfWeek = new List<string>();
+            //daysOfWeek.Add("Monday");
+            //daysOfWeek.Add("Tuesday");
+            //daysOfWeek.Add("Wednesday");
+            //daysOfWeek.Add("Thursday");
+            //daysOfWeek.Add("Friday");
+            //daysOfWeek.Add("Saturday");
+            //daysOfWeek.Add("Sunday");
 
             //string[] daysOfWeek =
             //{
