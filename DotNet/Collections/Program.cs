@@ -24,11 +24,19 @@ namespace Collections
             bool isValid = int.TryParse(Console.ReadLine(), out var input);
             if (isValid && input >= 0)
             {
-                int maxToDsiplay = Math.Min(input, countries.Count);
-                for (int i = 0; i < maxToDsiplay; i++)
+                int maxToDsiplay = input;
+                for (int i = 0; i < countries.Count; i++)
                 {
+
+                    if (i > 0 && (i % maxToDsiplay == 0))
+                    {
+                        Console.WriteLine("Hit return to continue, anything else to quit: ");
+                        if (Console.ReadLine() != "")
+                            break;
+                    }
+
                     Country country = countries[i];
-                    Console.WriteLine($"{country.Name} has an index of {i}");                                     
+                    Console.WriteLine($"{country.Name} is number {i+1}");                                     
                 }
             }
             else
