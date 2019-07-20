@@ -29,7 +29,15 @@ namespace Collections
             var russia = new Country("Russia", "RUS", "Europe", 200000000);
 
             var countries = new Dictionary<string, Country>();
+            countries.Add("AUS", australia);
+            countries.Add("RUS", russia);
 
+            Country selectedCountry = countries["AUS"];
+
+            Console.WriteLine($"{selectedCountry.Name} has {selectedCountry.Population} people!");
+
+            foreach (var country in countries.Values)
+                Console.WriteLine(country.Name);
 
 
 
