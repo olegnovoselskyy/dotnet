@@ -9,17 +9,27 @@ namespace Collections
         {
 
 
-            string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
+            //string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
 
-            CsvReader reader = new CsvReader(filePath);
+            //CsvReader reader = new CsvReader(filePath);
 
-            var countries = reader.ReadAllCountries();
+            //var countryOfOlaha = new Country("Olaha's Kingdom", "OK", "Olaha's Room", 60000);
 
-            foreach (Country country in countries)
-            {
+            //var countries = reader.ReadAllCountries();
+            //int index = countries.FindIndex(x => x.Population < 60000);
+            //countries.Insert(index, countryOfOlaha);
 
-                Console.WriteLine($"{country.Population} : {country.Name}");
-            }
+            //foreach (Country country in countries)
+            //{
+
+            //    Console.WriteLine($"{country.Population} : {country.Name}");
+            //}
+
+            var australia = new Country("Australia", "AUS", "Oceania", 100000000);
+            var russia = new Country("Russia", "RUS", "Europe", 200000000);
+
+            var countries = new Dictionary<string, Country>();
+
 
 
 

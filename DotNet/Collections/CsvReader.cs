@@ -65,7 +65,7 @@ namespace Collections
             //string instructorsCodeName;
             //string instructorsCodeCode;
             //string instructorsCodeRegion;
-            //string instructorsCodePopulation;  // For some reason it's a string now?
+            //string instructorsCodePopulation;
 
             //switch (parts.Length)
             //{
@@ -92,7 +92,8 @@ namespace Collections
             string name = parts[0];
             string code = parts[1];
             string region = parts[2];
-            int population = int.Parse(parts[3]);
+            //int population = int.Parse(parts[3]);
+            int.TryParse(parts[3], out int population);
 
             return new Country(name, code, region, population);
         }
