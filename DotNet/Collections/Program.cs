@@ -20,10 +20,20 @@ namespace Collections
             //int index = countries.FindIndex(x => x.Population < 60000);
             //countries.Insert(index, countryOfOlaha);
 
-            for (int i = 0; i< countries.Count; i++)
+            Console.Write("Enter # of coutnires to display: ");
+            bool isValid = int.TryParse(Console.ReadLine(), out var input);
+            if (isValid && input >= 0)
             {
-                Country country = countries[i];
-                Console.WriteLine($"{country.Name} has an index of {i}");
+                int maxToDsiplay = Math.Min(input, countries.Count);
+                for (int i = 0; i < maxToDsiplay; i++)
+                {
+                    Country country = countries[i];
+                    Console.WriteLine($"{country.Name} has an index of {i}");                                     
+                }
+            }
+            else
+            {
+                Console.WriteLine("That's not a valid interger, exiting program.");
             }
 
             //foreach (Country country in countries)
