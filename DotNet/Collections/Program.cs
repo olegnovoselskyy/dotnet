@@ -13,13 +13,18 @@ namespace Collections
 
             CsvReader reader = new CsvReader(filePath);
 
+            var countryOfOlaha = new Country("Olaha's Kingdom", "OK", "Olaha's Room", 1);
+            int index = 0;
+
             var countries = reader.ReadAllCountries();
+            countries.Insert(index, countryOfOlaha);
 
             foreach (Country country in countries)
             {
 
                 Console.WriteLine($"{country.Population} : {country.Name}");
             }
+
 
 
 
