@@ -13,22 +13,18 @@ namespace Collections
 
             CsvReader reader = new CsvReader(filePath);
 
-            Console.WriteLine("Enter a country code to look up a country:");
-            var countries = reader.ReadAllDictionaryCountries();
-            string userInput = Console.ReadLine();
 
-            bool gotCountry = countries.TryGetValue(userInput, out Country country);
+            var countryOfOlaha = new Country("Olaha's Kingdom", "OK", "Olaha's Room", 60000);
 
-            if (!gotCountry)
-                Console.WriteLine($"C'mon now... be real... {userInput} is not a country!");
-            else
-                Console.WriteLine($"{country.Name} has a population of {country.Population}");
-
-            //var countryOfOlaha = new Country("Olaha's Kingdom", "OK", "Olaha's Room", 60000);
-
-            //var countries = reader.ReadAllCountries();
+            var countries = reader.ReadAllCountries();
             //int index = countries.FindIndex(x => x.Population < 60000);
             //countries.Insert(index, countryOfOlaha);
+
+            for (int i = 0; i< countries.Count; i++)
+            {
+                Country country = countries[i];
+                Console.WriteLine($"{country.Name} has an index of {i}");
+            }
 
             //foreach (Country country in countries)
             //{
@@ -37,6 +33,18 @@ namespace Collections
             //}
 
             #region Old Code
+
+
+            //Console.WriteLine("Enter a country code to look up a country:");
+            //var countries = reader.ReadAllDictionaryCountries();
+            //string userInput = Console.ReadLine();
+
+            //bool gotCountry = countries.TryGetValue(userInput, out Country country);
+
+            //if (!gotCountry)
+            //    Console.WriteLine($"C'mon now... be real... {userInput} is not a country!");
+            //else
+            //    Console.WriteLine($"{country.Name} has a population of {country.Population}");
 
             //var countries = new Dictionary<string, Country>
             //{
