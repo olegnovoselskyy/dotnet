@@ -13,10 +13,10 @@ namespace Collections
 
             CsvReader reader = new CsvReader(filePath);
 
-            var countryOfOlaha = new Country("Olaha's Kingdom", "OK", "Olaha's Room", 1);
-            int index = 0;
+            var countryOfOlaha = new Country("Olaha's Kingdom", "OK", "Olaha's Room", 60000);
 
             var countries = reader.ReadAllCountries();
+            int index = countries.FindIndex(x => x.Population < 60000);
             countries.Insert(index, countryOfOlaha);
 
             foreach (Country country in countries)
