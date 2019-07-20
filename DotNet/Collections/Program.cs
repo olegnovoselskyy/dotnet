@@ -9,9 +9,20 @@ namespace Collections
         {
 
 
-            //string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
+            string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
 
-            //CsvReader reader = new CsvReader(filePath);
+            CsvReader reader = new CsvReader(filePath);
+
+            Console.WriteLine("Enter a country code to look up a country:");
+            var countries = reader.ReadAllDictionaryCountries();
+            string userInput = Console.ReadLine();
+
+            bool gotCountry = countries.TryGetValue(userInput, out Country country);
+
+            if (!gotCountry)
+                Console.WriteLine($"C'mon now... be real... {userInput} is not a country!");
+            else
+                Console.WriteLine($"{country.Name} has a population of {country.Population}");
 
             //var countryOfOlaha = new Country("Olaha's Kingdom", "OK", "Olaha's Room", 60000);
 
@@ -25,24 +36,20 @@ namespace Collections
             //    Console.WriteLine($"{country.Population} : {country.Name}");
             //}
 
-            var australia = new Country("Australia", "AUS", "Oceania", 100000000);
-            var russia = new Country("Russia", "RUS", "Europe", 200000000);
-
-            var countries = new Dictionary<string, Country>();
-            countries.Add("AUS", australia);
-            countries.Add("RUS", russia);
-
-            Country selectedCountry = countries["AUS"];
-
-            Console.WriteLine($"{selectedCountry.Name} has {selectedCountry.Population} people!");
-
-            foreach (var country in countries.Values)
-                Console.WriteLine(country.Name);
-
-
-
-
             #region Old Code
+
+            //var countries = new Dictionary<string, Country>
+            //{
+            //    { "AUS", new Country("Australia", "AUS", "Oceania", 100000000)},
+            //    { "RUS", new Country("Russia", "RUS", "Europe", 200000000)}
+            //};
+
+            //Country selectedCountry = countries["AUS"];
+
+            //Console.WriteLine($"{selectedCountry.Name} has {selectedCountry.Population} people!");
+
+            //foreach (var country in countries.Values)
+            //    Console.WriteLine(country.Name);
 
 
             //string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
