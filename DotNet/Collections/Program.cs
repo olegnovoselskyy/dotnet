@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Collections
 {
@@ -20,38 +21,39 @@ namespace Collections
             //int index = countries.FindIndex(x => x.Population < 60000);
             //countries.Insert(index, countryOfOlaha);
 
-            Console.Write("Enter # of coutnires to display: ");
-            bool isValid = int.TryParse(Console.ReadLine(), out var input);
-            if (isValid && input >= 0)
+
+            foreach (Country country in countries.Where(x => !x.Name.Contains(',')))
             {
-                int maxToDsiplay = input;
-                for (int i = 0; i < countries.Count; i++)
-                {
 
-                    if (i > 0 && (i % maxToDsiplay == 0))
-                    {
-                        Console.WriteLine("Hit return to continue, anything else to quit: ");
-                        if (Console.ReadLine() != "")
-                            break;
-                    }
-
-                    Country country = countries[i];
-                    Console.WriteLine($"{country.Name} is number {i+1}");                                     
-                }
+                Console.WriteLine($"{country.Population} : {country.Name}");
             }
-            else
-            {
-                Console.WriteLine("That's not a valid interger, exiting program.");
-            }
-
-            //foreach (Country country in countries)
-            //{
-
-            //    Console.WriteLine($"{country.Population} : {country.Name}");
-            //}
 
             #region Old Code
 
+
+            //Console.Write("Enter # of coutnires to display: ");
+            //bool isValid = int.TryParse(Console.ReadLine(), out var input);
+            //if (isValid && input >= 0)
+            //{
+            //    int maxToDsiplay = input;
+            //    for (int i = 0; i < countries.Count; i++)
+            //    {
+
+            //        if (i > 0 && (i % maxToDsiplay == 0))
+            //        {
+            //            Console.WriteLine("Hit return to continue, anything else to quit: ");
+            //            if (Console.ReadLine() != "")
+            //                break;
+            //        }
+
+            //        Country country = countries[i];
+            //        Console.WriteLine($"{country.Name} is number {i+1}");                                     
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("That's not a valid interger, exiting program.");
+            //}
 
             //Console.WriteLine("Enter a country code to look up a country:");
             //var countries = reader.ReadAllDictionaryCountries();
