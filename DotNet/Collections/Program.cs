@@ -22,6 +22,10 @@ namespace Collections
             //countries.Insert(index, countryOfOlaha);
 
             var filteredCountires = countries.Where(x => !x.Name.Contains(','));
+            var filteredCountires2 = from country in countries
+                                     where !country.Name.Contains(',')
+                                     select country;
+
 
             foreach (Country country in filteredCountires)
             {
