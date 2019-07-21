@@ -21,8 +21,9 @@ namespace Collections
             //int index = countries.FindIndex(x => x.Population < 60000);
             //countries.Insert(index, countryOfOlaha);
 
+            var filteredCountires = countries.Where(x => !x.Name.Contains(','));
 
-            foreach (Country country in countries.Where(x => !x.Name.Contains(',')))
+            foreach (Country country in filteredCountires)
             {
 
                 Console.WriteLine($"{country.Population} : {country.Name}");
