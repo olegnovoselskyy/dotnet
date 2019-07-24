@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Collections
 {
@@ -9,32 +10,79 @@ namespace Collections
         {
 
 
-            //string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
+            string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
 
-            //CsvReader reader = new CsvReader(filePath);
+            CsvReader reader = new CsvReader(filePath);
 
-            //var countryOfOlaha = new Country("Olaha's Kingdom", "OK", "Olaha's Room", 60000);
 
-            //var countries = reader.ReadAllCountries();
+            var countryOfOlaha = new Country("Olaha's Kingdom", "OK", "Olaha's Room", 60000);
+
+            var countries = reader.ReadAllCountries();
             //int index = countries.FindIndex(x => x.Population < 60000);
             //countries.Insert(index, countryOfOlaha);
 
-            //foreach (Country country in countries)
-            //{
-
-            //    Console.WriteLine($"{country.Population} : {country.Name}");
-            //}
-
-            var australia = new Country("Australia", "AUS", "Oceania", 100000000);
-            var russia = new Country("Russia", "RUS", "Europe", 200000000);
-
-            var countries = new Dictionary<string, Country>();
+            var filteredCountires = countries.Where(x => !x.Name.Contains(','));
+            var filteredCountires2 = from country in countries
+                                     where !country.Name.Contains(',')
+                                     select country;
 
 
+            foreach (Country country in filteredCountires)
+            {
 
-
+                Console.WriteLine($"{country.Population} : {country.Name}");
+            }
 
             #region Old Code
+
+
+            //Console.Write("Enter # of coutnires to display: ");
+            //bool isValid = int.TryParse(Console.ReadLine(), out var input);
+            //if (isValid && input >= 0)
+            //{
+            //    int maxToDsiplay = input;
+            //    for (int i = 0; i < countries.Count; i++)
+            //    {
+
+            //        if (i > 0 && (i % maxToDsiplay == 0))
+            //        {
+            //            Console.WriteLine("Hit return to continue, anything else to quit: ");
+            //            if (Console.ReadLine() != "")
+            //                break;
+            //        }
+
+            //        Country country = countries[i];
+            //        Console.WriteLine($"{country.Name} is number {i+1}");                                     
+            //    }
+            //}
+            //else
+            //{
+            //    Console.WriteLine("That's not a valid interger, exiting program.");
+            //}
+
+            //Console.WriteLine("Enter a country code to look up a country:");
+            //var countries = reader.ReadAllDictionaryCountries();
+            //string userInput = Console.ReadLine();
+
+            //bool gotCountry = countries.TryGetValue(userInput, out Country country);
+
+            //if (!gotCountry)
+            //    Console.WriteLine($"C'mon now... be real... {userInput} is not a country!");
+            //else
+            //    Console.WriteLine($"{country.Name} has a population of {country.Population}");
+
+            //var countries = new Dictionary<string, Country>
+            //{
+            //    { "AUS", new Country("Australia", "AUS", "Oceania", 100000000)},
+            //    { "RUS", new Country("Russia", "RUS", "Europe", 200000000)}
+            //};
+
+            //Country selectedCountry = countries["AUS"];
+
+            //Console.WriteLine($"{selectedCountry.Name} has {selectedCountry.Population} people!");
+
+            //foreach (var country in countries.Values)
+            //    Console.WriteLine(country.Name);
 
 
             //string filePath = @"D:\Repos\dotnet\DotNet\Collections\PopbyLargestFinal.csv";
