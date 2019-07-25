@@ -9,6 +9,7 @@ namespace Nulls
         public string Name { get; set; }
         public int? DaysSinceLastLogin { get; set; }
         public DateTime? DateOfBirth { get; set; }
+        public bool? IsNew { get; set; }
 
         public PlayerCharacter()
         {

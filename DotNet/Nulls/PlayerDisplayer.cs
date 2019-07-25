@@ -27,6 +27,19 @@ namespace Nulls
             {
                 Console.WriteLine(player.DateOfBirth);
             }
+
+            if (player.IsNew == null)
+            {
+                Console.WriteLine("Player experience is unknown");
+            }
+            else if (player.IsNew == true)
+            {
+                Console.WriteLine("Player is noob");
+            }
+            else
+            {
+                Console.WriteLine("Player is experienced");
+            }
             
         }
     }
