@@ -61,8 +61,11 @@ namespace Collections
             //int lilliputIndex = countries.FindIndex(x => x.Population < 2_000_000);
             //countries.Insert(lilliputIndex, lilliput);
             //countries.RemoveAt(lilliputIndex);
-
-            foreach (Country country in countries.OrderBy(x=>x.Name).Take(10))
+            var filteredCountries = countries.Where(x => !x.Name.Contains(','));
+            var filteredCountries2 = from country in countries
+                                     where !country.Name.Contains(',')
+                                     select country;
+            foreach (Country country in filteredCountries2)
             {
                 Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
