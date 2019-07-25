@@ -10,7 +10,7 @@ namespace Nulls
         {
             Console.WriteLine(player.Name);
 
-            if (player.DaysSinceLastLogin == 0)
+            if (player.DaysSinceLastLogin == null)
             {
                 Console.WriteLine("Never logged in");
             }
@@ -19,7 +19,7 @@ namespace Nulls
                 Console.WriteLine(player.DaysSinceLastLogin);
             }
 
-            if (player.DateOfBirth == DateTime.MinValue)
+            if (player.DateOfBirth == null)
             {
                 Console.WriteLine(DateTime.Now);
             }
