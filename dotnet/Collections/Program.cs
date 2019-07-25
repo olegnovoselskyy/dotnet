@@ -62,7 +62,7 @@ namespace Collections
             //countries.Insert(lilliputIndex, lilliput);
             //countries.RemoveAt(lilliputIndex);
 
-            foreach (Country country in countries.Take(10))
+            foreach (Country country in countries.OrderBy(x=>x.Name))
             {
                 Console.WriteLine($"{PopulationFormatter.FormatPopulation(country.Population).PadLeft(15)}: {country.Name}");
             }
