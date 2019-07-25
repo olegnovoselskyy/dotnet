@@ -6,12 +6,13 @@ namespace Collections
 {
     class Game
     {
-        private Square[][] _board =
-        {
-            new Square[3],
-            new Square[3],
-            new Square[3]
-        };
+        //private Square[][] _board =
+        //{
+        //    new Square[3],
+        //    new Square[3],
+        //    new Square[3]
+        //};
+        private Square[,] _board = new Square[3, 3];
 
         public void PlayGame()
         {
@@ -33,7 +34,7 @@ namespace Collections
             for (int i = 0; i < 3; i++)
             {
                 for (int j = 0; j < 3; j++)
-                    Console.Write(" " + _board[i][j]);
+                    Console.Write(" " + _board[i,j]);
                 Console.WriteLine();
             }
         }
@@ -52,13 +53,13 @@ namespace Collections
             if (row < 1 || row > 3 || column < 1 || column > 3)
                 return false;
 
-            if(_board[row - 1][column - 1].Owner != Player.Empty)
+            if(_board[row - 1, column - 1].Owner != Player.Empty)
             {
                 Console.WriteLine("Square is already occupied");
                 return false;
             }
 
-            _board[row - 1][column - 1] = new Square(player);
+            _board[row - 1, column - 1] = new Square(player);
             return true;
         }
     }
