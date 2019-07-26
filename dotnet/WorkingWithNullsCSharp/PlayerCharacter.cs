@@ -22,14 +22,16 @@ namespace WorkingWithNullsCSharp
 
         public void Hit(int damage)
         {
-            int damageReduction = 0;
+            //int damageReduction = 0;
 
-            if (_specialDefense != null)
-            {
-                damageReduction = _specialDefense.CalculateDamageReduction(damage);
-            }
+            //if (_specialDefense != null)
+            //{
+            //    damageReduction = _specialDefense.CalculateDamageReduction(damage);
+            //}
 
-            int totalDamageTaken = damage - damageReduction;
+            //int totalDamageTaken = damage - damageReduction;
+
+            int totalDamageTaken = damage - _specialDefense.CalculateDamageReduction(damage);
 
             Health -= totalDamageTaken;
 

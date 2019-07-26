@@ -13,8 +13,9 @@ namespace WorkingWithNullsCSharp
             };
 
             PlayerDisplay.Write(destuctor);
+            Console.WriteLine();
 
-            PlayerCharacter mickey = new PlayerCharacter(null)
+            PlayerCharacter mickey = new PlayerCharacter(new NullDefense())
             {
                 Name = "Mickey Mouse",
                 DaysSinceLastLogin = 1,
@@ -23,6 +24,7 @@ namespace WorkingWithNullsCSharp
             };
 
             PlayerDisplay.Write(mickey);
+            Console.WriteLine();
 
             PlayerCharacter dima = new PlayerCharacter(new DiamondSkinDefense())
             {
@@ -32,6 +34,7 @@ namespace WorkingWithNullsCSharp
             };
 
             PlayerDisplay.Write(dima);
+            Console.WriteLine();
 
             destuctor.Hit(10);
             mickey.Hit(10);
