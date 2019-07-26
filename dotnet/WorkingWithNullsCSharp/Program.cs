@@ -11,16 +11,16 @@ namespace WorkingWithNullsCSharp
             //player.DaysSinceLastLogin = 1;
             //player.DateOfBirth = Convert.ToDateTime("10/31/1913 3:00 AM");
 
-            int days;
+            int days = player?.DaysSinceLastLogin ?? -1;
 
-            if(player != null)
-            {
-                days = player.DaysSinceLastLogin ?? -1;
-            }
-            else
-            {
-                days = -1;
-            }
+            //if(player != null)
+            //{
+            //    days = player.DaysSinceLastLogin ?? -1;
+            //}
+            //else
+            //{
+            //    days = -1;
+            //}
 
             Console.WriteLine(days);
 
