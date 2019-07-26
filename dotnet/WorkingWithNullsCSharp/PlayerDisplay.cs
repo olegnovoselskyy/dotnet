@@ -8,23 +8,31 @@ namespace WorkingWithNullsCSharp
     {
         public static void Write(PlayerCharacter player)
         {
-            Console.WriteLine(player.Name);
-            if (player.DaysSinceLastLogin == null)
+            if (String.IsNullOrWhiteSpace(player.Name))
             {
-                Console.WriteLine("No value for Days Since Last Login.");
+                Console.WriteLine("Player name is unknown.");
             }
             else
             {
-                Console.WriteLine(player.DaysSinceLastLogin);
+                Console.WriteLine(player.Name);
+            }
+
+            if (player.DaysSinceLastLogin == null)
+            {
+                Console.WriteLine("Days Since Last Login is unknown.");
+            }
+            else
+            {
+                Console.WriteLine(player.DaysSinceLastLogin + " day(s) since last login");
             }
 
             if (player.DateOfBirth == null)
             {
-                Console.WriteLine("No Date Of Birth.");
+                Console.WriteLine("Date Of Birth is unknown.");
             }
             else
             {
-                Console.WriteLine(player.DateOfBirth);
+                Console.WriteLine("DOB: " + player.DateOfBirth);
             }
 
             if(player.IsNoob == null)

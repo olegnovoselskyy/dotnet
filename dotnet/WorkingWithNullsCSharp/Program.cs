@@ -7,9 +7,9 @@ namespace WorkingWithNullsCSharp
         static void Main(string[] args)
         {
             var player = new PlayerCharacter();
-            player.Name = "Destructor";
-            //player.DaysSinceLastLogin = 1;
-            //player.DateOfBirth = Convert.ToDateTime("10/31/1913 3:00 AM");
+            player.Name = null;
+            player.DaysSinceLastLogin = 1;
+            player.DateOfBirth = Convert.ToDateTime("10/31/1913 3:00 AM");
 
             PlayerDisplay.Write(player);
             Console.ReadLine();
