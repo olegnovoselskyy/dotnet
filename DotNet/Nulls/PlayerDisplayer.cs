@@ -8,7 +8,15 @@ namespace Nulls
     {
         public static void Write(PlayerCharacter player)
         {
-            Console.WriteLine(player.Name);
+
+            if (string.IsNullOrWhiteSpace(player.Name))
+            {
+                Console.WriteLine("Player has no name.");
+            }
+            else
+            {
+                Console.WriteLine(player.Name);
+            }
 
             if (player.DaysSinceLastLogin == null)
             {

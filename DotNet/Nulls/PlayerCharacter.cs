@@ -11,11 +11,11 @@ namespace Nulls
         public DateTime? DateOfBirth { get; set; }
         public bool? IsNew { get; set; }
 
-        public PlayerCharacter()
-        {
-            Name = "No name given.";
-            DateOfBirth = null;
-            DaysSinceLastLogin = null;
-        }
+        //public PlayerCharacter()
+        //{
+        //    Name = "No name given.";
+        //    DateOfBirth = null;
+        //    DaysSinceLastLogin = null;
+        //}
     }
 }
