@@ -7,7 +7,7 @@ namespace Nulls
         static void Main(string[] args)
         {
             var player = new PlayerCharacter();
-
+            player.DaysSinceLastLogin = 5;
 
             PlayerDisplayer.Write(player);
 

@@ -31,7 +31,7 @@ namespace Nulls
             }
             else
             {
-                Console.WriteLine(player.DaysSinceLastLogin);
+                Console.WriteLine(player.DaysSinceLastLogin.Value);
             }
 
             if (player.DateOfBirth == null)
