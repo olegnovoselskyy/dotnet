@@ -17,25 +17,25 @@ namespace WorkingWithNullsCSharp
                 Console.WriteLine(player.Name);
             }
 
-            if (player.DaysSinceLastLogin == null)
+            if (player.DaysSinceLastLogin.HasValue)
+            {
+                Console.WriteLine(player.DaysSinceLastLogin.Value + " day(s) since last login");
+            }
+            else
             {
                 Console.WriteLine("Days Since Last Login is unknown.");
             }
-            else
-            {
-                Console.WriteLine(player.DaysSinceLastLogin + " day(s) since last login");
-            }
 
-            if (player.DateOfBirth == null)
-            {
-                Console.WriteLine("Date Of Birth is unknown.");
-            }
-            else
+            if (player.DateOfBirth.HasValue)
             {
                 Console.WriteLine("DOB: " + player.DateOfBirth);
             }
+            else
+            {
+                Console.WriteLine("Date Of Birth is unknown.");
+            }
 
-            if(player.IsNoob == null)
+            if(!player.IsNoob.HasValue)
             {
                 Console.WriteLine("Player noob status is unknown.");
 
