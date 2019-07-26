@@ -4,9 +4,9 @@ using System.Text;
 
 namespace WorkingWithNullsCSharp
 {
-    public class IronBonesDefense : ISpecialDefense
+    public class IronBonesDefense : SpecialDefense
     {
-        public int CalculateDamageReduction(int totalDamage)
+        public override int CalculateDamageReduction(int totalDamage)
         {
             return 5;
         }

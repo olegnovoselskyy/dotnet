@@ -6,9 +6,9 @@ namespace WorkingWithNullsCSharp
 {
     class PlayerCharacter
     {
-        private readonly ISpecialDefense _specialDefense;
+        private readonly SpecialDefense _specialDefense;
 
-        public PlayerCharacter(ISpecialDefense specialDefense)
+        public PlayerCharacter(SpecialDefense specialDefense)
         {
             _specialDefense = specialDefense;
         }

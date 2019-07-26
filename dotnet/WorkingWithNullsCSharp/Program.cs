@@ -15,7 +15,7 @@ namespace WorkingWithNullsCSharp
             PlayerDisplay.Write(destuctor);
             Console.WriteLine();
 
-            PlayerCharacter mickey = new PlayerCharacter(new NullDefense())
+            PlayerCharacter mickey = new PlayerCharacter(SpecialDefense.Null)
             {
                 Name = "Mickey Mouse",
                 DaysSinceLastLogin = 1,
