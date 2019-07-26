@@ -17,7 +17,9 @@ namespace WorkingWithNullsCSharp
                 Console.WriteLine(player.Name);
             }
 
-            int days = player.DaysSinceLastLogin.GetValueOrDefault(-1337);
+
+            int days = player.DaysSinceLastLogin.HasValue ? player.DaysSinceLastLogin.Value : -1337;
+            //int days = player.DaysSinceLastLogin.GetValueOrDefault(-1337);
             Console.WriteLine(days + " day(s) since last login");
 
             //if (player.DaysSinceLastLogin.HasValue)
