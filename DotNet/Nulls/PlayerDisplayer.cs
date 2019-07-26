@@ -6,8 +6,14 @@ namespace Nulls
 {
     class PlayerDisplayer
     {
+        private static int RandomNumber;
         public static void Write(PlayerCharacter player)
         {
+            // Can only be used with objects
+            int? test = null;
+            int test1 = player.DaysSinceLastLogin ?? -1;
+            
+
             int? days = player.DaysSinceLastLogin.GetValueOrDefault(0);
             Console.WriteLine($"{days.GetValueOrDefault()} Days");
             if (string.IsNullOrWhiteSpace(player.Name))
@@ -49,7 +55,8 @@ namespace Nulls
             {
                 Console.WriteLine("Player is experienced");
             }
-            
+            Console.WriteLine(player.ExperienceLevel);
+            Console.WriteLine(RandomNumber);
         }
     }
 }

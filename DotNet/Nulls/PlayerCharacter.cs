@@ -11,6 +11,8 @@ namespace Nulls
         public DateTime? DateOfBirth { get; set; }
         public bool? IsNew { get; set; }
 
+        public int ExperienceLevel { get; set; }
+
         //public PlayerCharacter()
         //{
         //    Name = "No name given.";
