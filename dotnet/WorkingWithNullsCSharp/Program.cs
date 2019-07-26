@@ -6,25 +6,18 @@ namespace WorkingWithNullsCSharp
     {
         static void Main(string[] args)
         {
-            PlayerCharacter player = null;
-            //player.Name = "Young Dim Flexmaster Floss";
-            //player.DaysSinceLastLogin = 1;
-            //player.DateOfBirth = Convert.ToDateTime("10/31/1913 3:00 AM");
+            PlayerCharacter[] players = new PlayerCharacter[3]
+            {
+                new PlayerCharacter {Name = "Dima"},
+                new PlayerCharacter (),
+                null
 
-            int days = player?.DaysSinceLastLogin ?? -1;
+            };
 
-            //if(player != null)
-            //{
-            //    days = player.DaysSinceLastLogin ?? -1;
-            //}
-            //else
-            //{
-            //    days = -1;
-            //}
+            string p1 = players?[0]?.Name;
+            string p2 = players?[1]?.Name;
+            string p3 = players?[2]?.Name;
 
-            Console.WriteLine(days);
-
-            //PlayerDisplay.Write(player);
             Console.ReadLine();
         }
     }
