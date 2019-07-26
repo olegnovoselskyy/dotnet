@@ -8,7 +8,8 @@ namespace Nulls
     {
         public static void Write(PlayerCharacter player)
         {
-
+            int? days = player.DaysSinceLastLogin.GetValueOrDefault(0);
+            Console.WriteLine($"{days.GetValueOrDefault()} Days");
             if (string.IsNullOrWhiteSpace(player.Name))
             {
                 Console.WriteLine("Player has no name.");
@@ -18,7 +19,7 @@ namespace Nulls
                 Console.WriteLine(player.Name);
             }
 
-            if (player.DaysSinceLastLogin == null)
+            if (!player.DaysSinceLastLogin.HasValue)
             {
                 Console.WriteLine("Never logged in");
             }
