@@ -114,12 +114,12 @@ namespace OOPFundamentals.BLTest
             {
                 FirstName = "Ya",
                 LastName = "Boi",
-                EmailAddress = "yaboi@skylytt.com"
+                EmailAddress = "yaboi@skyylyt.com"
 
             };
             Customer.InstanceCount++;
 
-            Product SkyLyttGame = new Product
+            Product SkyyLytGame = new Product
             {
                 ProductID = 1,
                 ProductName = "Pocket Pals: Adventure",
@@ -130,7 +130,7 @@ namespace OOPFundamentals.BLTest
             OrderItem oi1 = new OrderItem
             {
                 OrderItemID = 1,
-                ProductID = SkyLyttGame.ProductID,
+                ProductID = SkyyLytGame.ProductID,
                 Quantity = 1,
                 PurchasePrice = 20
             };
@@ -144,7 +144,7 @@ namespace OOPFundamentals.BLTest
                 OrderItemCount = orderItemCount
             };
 
-            if(luckyCustomer1.Validate() && SkyLyttGame.Validate() && oi1.Validate() && o1.Validate())
+            if(luckyCustomer1.Validate() && SkyyLytGame.Validate() && oi1.Validate() && o1.Validate())
             {
                 OrderValid = true;
             }
