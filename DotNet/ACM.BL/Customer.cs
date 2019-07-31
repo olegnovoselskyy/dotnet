@@ -1,9 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ACM.BL
 {
     public class Customer
     {
+        #region Constructors
+
+        public Customer()
+        {
+
+        }
+
+        public Customer(int customerId)
+        {
+            CustomerID = customerId;
+        }
+        #endregion
 
         #region Fields
 
@@ -61,6 +74,57 @@ namespace ACM.BL
         }
 
         public static int InstanceCount { get; set; }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Validates the customer data, LastName and Email required.
+        /// </summary>
+        public bool Validate()
+        {
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName) || string.IsNullOrWhiteSpace(EmailAddress))
+                isValid = false;
+
+            return isValid;
+        }
+
+        /// <summary>
+        /// Saves the customer data
+        /// </summary>
+        /// <returns>
+        /// Returns a boolean
+        /// </returns>
+        public bool Save()
+        {
+            return true;
+        }
+
+        /// <summary>
+        /// Loads one customer based on CustomerID
+        /// </summary>
+        /// <returns>
+        /// Returns a Customer object
+        /// </returns>
+        public Customer Load(int customerId)
+        {
+            return new Customer();
+        }
+
+        /// <summary>
+        /// Loads all customers
+        /// </summary>
+        /// <returns>
+        /// Returns a list of customers
+        /// </returns>
+        public List<Customer> LoadAll()
+        {
+            return new List<Customer>();
+        }
+
 
         #endregion
 

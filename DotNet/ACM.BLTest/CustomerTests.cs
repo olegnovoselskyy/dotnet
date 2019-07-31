@@ -81,5 +81,41 @@ namespace ACM.BLTest
             //Assert
             Assert.Equal(expectedResult, actualResult);
         }
+
+        [Fact]
+        public void ValidateValidMethod()
+        {
+            //Arrange 
+            var customerFalse = new Customer();
+            customerFalse.FirstName = "Oleg";
+
+            var customerTrue = new Customer();
+            customerTrue.LastName = "Novo";
+            customerTrue.EmailAddress = "oleg.novoselskyy@gmail.com";
+
+            //Act
+            var validateFalse = customerFalse.Validate();
+            var validateTrue = customerTrue.Validate();
+
+            //Assert
+            Assert.False(validateFalse);
+            Assert.True(validateTrue);
+
+        }
+
+        [Fact]
+        public void CustomerIDConstructor()
+        {
+            //Arrange 
+            var customer = new Customer(1);
+            var expectedResult = 1;
+
+            //Act
+            var actualResult = customer.CustomerID;
+
+            //Assert
+            Assert.Equal(expectedResult, actualResult);
+
+        }
     }
 }
