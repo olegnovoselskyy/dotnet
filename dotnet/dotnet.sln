@@ -5,7 +5,13 @@ VisualStudioVersion = 16.0.29001.49
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Collections", "Collections\Collections.csproj", "{AB9C5DE9-DBE2-4E78-BFE3-BD41F8B20E1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkingWithNullsCSharp", "WorkingWithNullsCSharp\WorkingWithNullsCSharp.csproj", "{07CB6A19-D160-406A-AA86-F829A906540C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkingWithNullsCSharp", "WorkingWithNullsCSharp\WorkingWithNullsCSharp.csproj", "{07CB6A19-D160-406A-AA86-F829A906540C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPFundamentals.BL", "OOPFundamentals.BL\OOPFundamentals.BL.csproj", "{1232B382-CC71-47B8-91C2-146482AD75A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OOPFundamentalsTests", "OOPFundamentalsTests", "{2B377A2A-3647-40E9-9A41-9B2E02F9B55F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPFundamentals.BLTest", "OOPFundamentalsTest\OOPFundamentals.BLTest\OOPFundamentals.BLTest.csproj", "{E0FE276B-908E-4D88-84F9-44BFF8C34534}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,9 +27,20 @@ Global
 		{07CB6A19-D160-406A-AA86-F829A906540C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07CB6A19-D160-406A-AA86-F829A906540C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07CB6A19-D160-406A-AA86-F829A906540C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1232B382-CC71-47B8-91C2-146482AD75A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1232B382-CC71-47B8-91C2-146482AD75A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1232B382-CC71-47B8-91C2-146482AD75A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1232B382-CC71-47B8-91C2-146482AD75A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0FE276B-908E-4D88-84F9-44BFF8C34534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0FE276B-908E-4D88-84F9-44BFF8C34534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0FE276B-908E-4D88-84F9-44BFF8C34534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0FE276B-908E-4D88-84F9-44BFF8C34534}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E0FE276B-908E-4D88-84F9-44BFF8C34534} = {2B377A2A-3647-40E9-9A41-9B2E02F9B55F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71828884-FF23-4B8E-A6B5-818365DE282A}
