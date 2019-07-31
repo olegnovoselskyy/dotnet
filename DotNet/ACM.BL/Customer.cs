@@ -45,7 +45,18 @@ namespace ACM.BL
         {
             get
             {
-                return FirstName + " " + LastName;
+                if (string.IsNullOrWhiteSpace(FirstName))
+                {
+                    return LastName;
+                }
+                else if (string.IsNullOrWhiteSpace(LastName))
+                {
+                    return FirstName;
+                }
+                else
+                {
+                    return FirstName + " " + LastName;
+                }
             }
         }
 

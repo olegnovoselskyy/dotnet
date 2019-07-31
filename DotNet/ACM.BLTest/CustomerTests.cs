@@ -31,7 +31,7 @@ namespace ACM.BLTest
             var customer = new Customer();
             customer.LastName = "Novo";
 
-            var expectedResult = " Novo";
+            var expectedResult = "Novo";
 
             //Act
             var actualResult = customer.FullName;
@@ -47,7 +47,7 @@ namespace ACM.BLTest
             var customer = new Customer();
             customer.FirstName = "Oleg";
 
-            var expectedResult = "Oleg ";
+            var expectedResult = "Oleg";
 
             //Act
             var actualResult = customer.FullName;
