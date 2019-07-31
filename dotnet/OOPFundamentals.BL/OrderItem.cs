@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPFundamentals.BL
 {
-    class OrderItem
+    public class OrderItem
     {
         public OrderItem()
         {

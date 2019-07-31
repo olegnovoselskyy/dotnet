@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPFundamentals.BL
 {
-    class Order
+    public class Order
     {
         public Order()
         {
@@ -18,8 +18,9 @@ namespace OOPFundamentals.BL
             OrderID = orderId;
         }
         public int OrderID { get; set; }
+        public int CustomerID { get; set; }
         public DateTimeOffset? OrderDate { get; set; }
-        public static int OrderItemCount { get; set; }
+        public int OrderItemCount { get; set; }
 
         /// <summary>
         /// Retrieve one order.

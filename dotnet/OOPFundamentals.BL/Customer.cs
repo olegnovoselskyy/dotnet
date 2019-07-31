@@ -15,10 +15,10 @@ namespace OOPFundamentals.BL
 
         public Customer(int customerId)
         {
-            CustomerId = customerId;
+            CustomerID = customerId;
         }
 
-        public int CustomerId { get; private set; }
+        public int CustomerID { get; private set; }
         public string EmailAddress { get; set; }
         public string FirstName { get; set; }
 
