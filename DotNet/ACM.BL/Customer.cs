@@ -90,29 +90,7 @@ namespace ACM.BL
                 isValid = false;
 
             return isValid;
-        }
-
-        /// <summary>
-        /// Saves the customer data
-        /// </summary>
-        /// <returns>
-        /// Returns a boolean
-        /// </returns>
-        public bool Save()
-        {
-            return true;
-        }
-
-        /// <summary>
-        /// Loads one customer based on CustomerID
-        /// </summary>
-        /// <returns>
-        /// Returns a Customer object
-        /// </returns>
-        public Customer Load(int customerId)
-        {
-            return new Customer();
-        }
+        }     
 
         /// <summary>
         /// Loads all customers
