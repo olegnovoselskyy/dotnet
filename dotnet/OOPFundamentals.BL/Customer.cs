@@ -55,37 +55,6 @@ namespace OOPFundamentals.BL
         }
 
         /// <summary>
-        /// Retrieve one customer.
-        /// </summary>
-        public Customer Retrieve(int customerId)
-        {
-            // Code that retrieves the defined customer
-
-            return new Customer();
-        }
-
-        /// <summary>
-        /// Retrieve all customers.
-        /// </summary>
-        public List<Customer> Retrieve()
-        {
-            // Code that retrieves all of the customers
-
-            return new List<Customer>();
-        }
-
-        /// <summary>
-        /// Saves the current customer.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            // Code that saves the current product
-
-            return true;
-        }
-
-        /// <summary>
         /// Validates the customer data.
         /// </summary>
         /// <returns></returns>

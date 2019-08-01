@@ -23,37 +23,6 @@ namespace OOPFundamentals.BL
         public int OrderItemCount { get; set; }
 
         /// <summary>
-        /// Retrieve one order.
-        /// </summary>
-        public Order Retrieve(int orderId)
-        {
-            // Code that retrieves the defined order
-
-            return new Order();
-        }
-
-        /// <summary>
-        /// Retrieve all orders.
-        /// </summary>
-        public List<Order> Retrieve()
-        {
-            // Code that retrieves all of the orders
-
-            return new List<Order>();
-        }
-
-        /// <summary>
-        /// Saves the current order.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            // Code that saves the current order
-
-            return true;
-        }
-
-        /// <summary>
         /// Validates the order data.
         /// </summary>
         /// <returns></returns>

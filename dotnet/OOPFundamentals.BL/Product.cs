@@ -24,37 +24,6 @@ namespace OOPFundamentals.BL
         public decimal? CurrentPrice { get; set; }
 
         /// <summary>
-        /// Retrieve one product.
-        /// </summary>
-        public Product Retrieve(int productId)
-        {
-            // Code that retrieves the defined product
-
-            return new Product();
-        }
-
-        /// <summary>
-        /// Retrieve all products.
-        /// </summary>
-        public List<Product> Retrieve()
-        {
-            // Code that retrieves all of the products
-
-            return new List<Product>();
-        }
-
-        /// <summary>
-        /// Saves the current product.
-        /// </summary>
-        /// <returns></returns>
-        public bool Save()
-        {
-            // Code that saves the current product
-
-            return true;
-        }
-
-        /// <summary>
         /// Validates the product data.
         /// </summary>
         /// <returns></returns>
