@@ -20,6 +20,8 @@ namespace OOPFundamentals.BL
         public int OrderID { get; set; }
         public int CustomerID { get; set; }
         public DateTimeOffset? OrderDate { get; set; }
+        public int ShippingAddressID { get; set; }
+        public List<OrderItem> OrderItems { get; set; }
         public int OrderItemCount { get; set; }
 
         /// <summary>

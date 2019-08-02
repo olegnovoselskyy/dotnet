@@ -20,6 +20,7 @@ namespace OOPFundamentals.BL
         }
 
         public int CustomerID { get; private set; }
+        public int CustomerTypeID { get; set; }
         public string EmailAddress { get; set; }
         public List<Address> AddressList { get; set; }
         public string FirstName { get; set; }
