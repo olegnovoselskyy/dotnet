@@ -8,7 +8,7 @@ namespace OOPFundamentals.BL
 {
     public class Customer
     {
-        public Customer()
+        public Customer() : this(0)
         {
 
         }
@@ -16,10 +16,12 @@ namespace OOPFundamentals.BL
         public Customer(int customerId)
         {
             CustomerID = customerId;
+            AddressList = new List<Address>();
         }
 
         public int CustomerID { get; private set; }
         public string EmailAddress { get; set; }
+        public List<Address> AddressList { get; set; }
         public string FirstName { get; set; }
 
         public string FullName
