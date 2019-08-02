@@ -1,11 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ACM.BL
 {
     public class CustomerRepository
     {
+
+        private AddressRepository addresses { get; set; }
+
+        public CustomerRepository()
+        {
+            addresses = new AddressRepository();
+        }
+
         /// <summary>
         /// Loads one customer
         /// </summary>
@@ -20,6 +29,7 @@ namespace ACM.BL
                 customer.EmailAddress = "olegnovo1017@gmail.com";
                 customer.FirstName = "Oleg";
                 customer.LastName = "Novo";
+                customer.AddressList = addresses.LoadAllAddressesByCustomerID(customerId).ToList();
             }
 
             return customer;

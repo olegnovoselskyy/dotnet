@@ -75,6 +75,7 @@ namespace ACM.BL
 
         public static int InstanceCount { get; set; }
 
+        public List<CustomerAddress> AddressList { get; set; }
         #endregion
 
         #region Methods

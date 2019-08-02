@@ -10,6 +10,11 @@ namespace ACM.BL
         {
 
         }
+
+        public CustomerAddress(int addressId)
+        {
+            AddressID = addressId;
+        }
         #region Properties
 
         public int AddressID { get; private set; }
