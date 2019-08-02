@@ -27,6 +27,9 @@ namespace OOPFundamentals.BL
                 product.Description = "A helpful friend that fits in your pocket";
                 product.CurrentPrice = 300;
             }
+            Object myObject = new Object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}"); 
             return product;
         }
 

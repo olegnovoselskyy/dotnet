@@ -23,6 +23,8 @@ namespace OOPFundamentals.BL
         public string Description { get; set; }
         public decimal? CurrentPrice { get; set; }
 
+        public override string ToString() => ProductName;
+
         /// <summary>
         /// Validates the product data.
         /// </summary>
