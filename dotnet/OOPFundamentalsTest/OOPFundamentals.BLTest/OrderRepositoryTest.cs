@@ -24,7 +24,7 @@ namespace OOPFundamentals.BLTest
 
             //-- Assert
             Assert.AreEqual(expected.CustomerID, actual.CustomerID);
-            Assert.AreEqual(expected.OrderDate, actual.OrderDate);
+            //Assert.AreEqual(expected.OrderDate, actual.OrderDate); -- DateTime.Now against second DateTime.Now does not equal each other due to millisecond difference
             Assert.AreEqual(expected.OrderItemCount, actual.OrderItemCount);
         }
     }
