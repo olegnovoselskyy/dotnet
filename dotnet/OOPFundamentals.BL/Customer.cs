@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPFundamentals.BL
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         public Customer() : this(0)
         {
@@ -61,7 +61,7 @@ namespace OOPFundamentals.BL
         /// Validates the customer data.
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if (string.IsNullOrWhiteSpace(LastName) || string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPFundamentals.BL
 {
-    public class OrderItem
+    public class OrderItem : EntityBase
     {
         public OrderItem()
         {
@@ -58,7 +58,7 @@ namespace OOPFundamentals.BL
         /// Validates the order item data.
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if (ProductID <= 0 || PurchasePrice == null || Quantity <= 0) isValid = false;

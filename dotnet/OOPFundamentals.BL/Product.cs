@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPFundamentals.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         public Product()
         {
@@ -29,7 +29,7 @@ namespace OOPFundamentals.BL
         /// Validates the product data.
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if (string.IsNullOrWhiteSpace(ProductName) || CurrentPrice == null) isValid = false;

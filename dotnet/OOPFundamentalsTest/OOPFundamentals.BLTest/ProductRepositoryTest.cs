@@ -27,5 +27,45 @@ namespace OOPFundamentals.BLTest
             Assert.AreEqual(expected.Description, actual.Description);
             Assert.AreEqual(expected.CurrentPrice, actual.CurrentPrice);
         }
+
+        [TestMethod()]
+        public void SaveTestValid()
+        {
+            //-- Arrange
+            var productRepository = new ProductRepository();
+            var updatedProduct = new Product(2)
+            {
+                ProductName = "iPhone X",
+                Description = "The latest iPhone.",
+                CurrentPrice = 999M,
+                HasChanges = true
+            };
+
+            //-- Act
+            var actual = productRepository.Save(updatedProduct);
+
+            //-- Assert
+            Assert.AreEqual(true, actual);
+        }
+
+        [TestMethod()]
+        public void SaveTestMissingPrice()
+        {
+            //-- Arrange
+            var productRepository = new ProductRepository();
+            var updatedProduct = new Product(2)
+            {
+                ProductName = "iPhone X",
+                Description = "The latest iPhone.",
+                CurrentPrice = null,
+                HasChanges = true
+            };
+
+            //-- Act
+            var actual = productRepository.Save(updatedProduct);
+
+            //-- Assert
+            Assert.AreEqual(false, actual);
+        }
     }
 }

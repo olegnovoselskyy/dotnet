@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPFundamentals.BL
 {
-    public class Order
+    public class Order : EntityBase
     {
         public Order()
         {
@@ -28,7 +28,7 @@ namespace OOPFundamentals.BL
         /// Validates the order data.
         /// </summary>
         /// <returns></returns>
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if (OrderItemCount <= 0 || OrderDate == null) isValid = false;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOPFundamentals.BL
 {
-    public class Address
+    public class Address : EntityBase
     {
         public Address()
         {
@@ -27,7 +27,7 @@ namespace OOPFundamentals.BL
         public string PostalCode { get; set; }
         public string Country { get; set; }
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
             if (PostalCode == null) isValid = false;
