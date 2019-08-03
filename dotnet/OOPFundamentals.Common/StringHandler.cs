@@ -18,12 +18,14 @@ namespace OOPFundamentals.Common
                 {
                     if(char.IsUpper(letter))
                     {
+                        // Trim any spaces already there
+                        result = result.Trim();
                         result += " ";
                     }
                     result += letter;
                 }
             }
-            return result;
+            return result.Trim();
         }
 
     }

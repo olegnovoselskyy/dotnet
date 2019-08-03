@@ -53,5 +53,11 @@
     <Compile Include="ProductRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\OOPFundamentals.Common\OOPFundamentals.Common.csproj">
+      <Project>{b51e4ce7-3d5f-4b9d-9b7e-97a7004099d5}</Project>
+      <Name>OOPFundamentals.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
