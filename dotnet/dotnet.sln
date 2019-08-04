@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpCollections", "CSharp
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpWorkingWithNulls", "CSharpWorkingWithNulls", "{D4E2248F-4354-4D43-85FC-A68067DE2E90}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatesAndTimesFundamentals", "DatesAndTimesFundamentals", "{BBAA1B70-03AC-4CF2-9BD5-298391E07282}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
