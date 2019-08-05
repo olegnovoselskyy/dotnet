@@ -67,8 +67,32 @@ namespace DatesAndTimes
                 CultureInfo.InvariantCulture,
                 DateTimeStyles.AdjustToUniversal);
 
+
             Console.WriteLine(simpleParse);
             Console.WriteLine(simpleParse.Kind);
+
+            // Formatting to iso 8601
+            Console.WriteLine();
+            Console.WriteLine("Formatting to iso 8601:");
+            var date_ = "9/10/2019 10:00:00 PM";
+
+            var parsedDate_ = DateTimeOffset.ParseExact(date_,
+                "M/d/yyyy h:mm:ss tt",
+                CultureInfo.InvariantCulture);
+
+            parsedDate_.ToOffset(TimeSpan.FromHours(11));
+            var SformattedDate = simpleParse.ToString("s"); // simply use s
+            var OformattedDate = simpleParse.ToString("o"); // simply use o
+
+            Console.WriteLine(SformattedDate);
+            Console.WriteLine(OformattedDate);
+
+            // Converting to UTC
+            Console.WriteLine();
+            Console.WriteLine("Converting to UTC:");
+            var _now = DateTimeOffset.Now;
+
+            Console.WriteLine(_now.ToUniversalTime());
 
         }
     }
