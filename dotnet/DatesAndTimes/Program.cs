@@ -109,6 +109,18 @@ namespace DatesAndTimes
             Console.WriteLine($"Total Minutes: { timeSpan.TotalMinutes}");
             Console.WriteLine($"Total Seconds: {timeSpan.TotalSeconds}");
 
+            // Calculating Difference
+            Console.WriteLine();
+            Console.WriteLine("Calculating Difference:");
+            var start = DateTimeOffset.UtcNow;
+            var end = start.AddSeconds(45);
+
+            TimeSpan difference = end - start;
+
+            difference.Multiply(2);
+
+            Console.WriteLine(difference);
+
 
 
         }
