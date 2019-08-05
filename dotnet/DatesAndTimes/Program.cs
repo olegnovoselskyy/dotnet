@@ -58,6 +58,18 @@ namespace DatesAndTimes
 
             Console.WriteLine(parsedDate);
 
+            // Simple DateTime.Parse
+            Console.WriteLine();
+            Console.WriteLine("Simple DateTime.Parse:");
+            var _date = "2019-07-01 10:00:00 PM +02:00";
+
+            var simpleParse = DateTime.Parse(_date,
+                CultureInfo.InvariantCulture,
+                DateTimeStyles.AdjustToUniversal);
+
+            Console.WriteLine(simpleParse);
+            Console.WriteLine(simpleParse.Kind);
+
         }
     }
 }
