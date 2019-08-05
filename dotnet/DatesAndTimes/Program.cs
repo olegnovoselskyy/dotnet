@@ -7,6 +7,28 @@ namespace DatesAndTimes
 {
     class Program
     {
+        static Calendar calendar = CultureInfo.InvariantCulture.Calendar;
+
+        // IF WE CANNOT USE DOTNET CORE 3.0 - do this to get ISO week of the year (otherwise: use ISOWeek.GetWeekOfYear)
+        // This presumes that week starts with Monday.
+        // Week 1 is the 1st week of the year with a Thursday in it.
+        public static int GetIso8601WeekOfYear(DateTime _time)
+        {
+            // Seriously cheat. If its Monday, Tuesday or Wednesday, then it'll
+            // be the same week# as whatever Thursday, Friday, or Saturday are,
+            // and we'll always get those right
+            DayOfWeek day = calendar.GetDayOfWeek(_time);
+
+            if(day >= DayOfWeek.Monday && day <= DayOfWeek.Wednesday)
+            {
+                _time = _time.AddDays(3);
+            }
+
+            // return the week of our adjusted day
+            return calendar.GetWeekOfYear(time:, CalendarWeekRule.FirstFourDayWeek,
+                DayOfWeek.Monday);
+        }
+
         static void Main(string[] args)
         {
             // Parsing Date Time from file
@@ -121,7 +143,17 @@ namespace DatesAndTimes
 
             Console.WriteLine(difference);
 
+            // Getting Week of the year
+            Console.WriteLine();
+            Console.WriteLine("Getting Week of the year:");
+            var _start = new DateTimeOffset(2007, 12, 31, 0, 0, 0, TimeSpan.Zero);
 
+            var week = calendar.GetWeekOfYear(_start.DateTime,
+                CalendarWeekRule.FirstFourDayWeek,
+                DayOfWeek.Monday);
+
+            Console.WriteLine(week);
+            Console.WriteLine(GetIso8601WeekOfYear(_start.DateTime));
 
         }
     }
