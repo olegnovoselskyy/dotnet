@@ -10,9 +10,8 @@ namespace DatesAndTimes
         static void Main(string[] args)
         {
             // Parsing Date Time from file
-            var lines = File.ReadAllLines(@"C:\Users\amid2\source\repos\dotnet\dotnet\DatesAndTimes\StockData.csv");
-
             Console.WriteLine("Dates/Times from file:");
+            var lines = File.ReadAllLines(@"C:\Users\amid2\source\repos\dotnet\dotnet\DatesAndTimes\StockData.csv");
             foreach (var line in lines.Skip(1))
             {
                 var segments = line.Split(',');
@@ -20,21 +19,33 @@ namespace DatesAndTimes
 
                 Console.WriteLine(tradeDate.ToLongDateString());
             }
-            Console.WriteLine();
 
             // Converting Between Time Zones
+            Console.WriteLine();
+            Console.WriteLine("Converting Between Time Zones:");
             var now = DateTime.Now;
             TimeZoneInfo sydneyTimeZone = TimeZoneInfo.FindSystemTimeZoneById("E. Australia Standard Time");
             var sydneyTime = TimeZoneInfo.ConvertTime(now, sydneyTimeZone);
-
-            Console.WriteLine("Converting Between Time Zones:");
             Console.WriteLine($"Local: {now}");
             Console.WriteLine($"Sydney: {sydneyTime}");
 
             // DateTimeOffset includes TimeZone
             Console.WriteLine();
-            Console.WriteLine(DateTime.Now);
-            Console.WriteLine(DateTimeOffset.Now);
+            Console.WriteLine("DateTimeOffset includes TimeZone:");
+            Console.WriteLine($"DateTime.Now:  {DateTime.Now}");
+            Console.WriteLine($"DateTimeOffset.Now: {DateTimeOffset.Now}");
+
+            // Finding all System Time Zones
+            Console.WriteLine();
+            Console.WriteLine("Finding all System Time Zones:");
+            var time = DateTimeOffset.Now.ToOffset(TimeSpan.FromHours(-4)); // insert time zone calculation here
+            foreach (var timeZone in TimeZoneInfo.GetSystemTimeZones())
+            {
+                if (timeZone.GetUtcOffset(time) == time.Offset)
+                {
+                    Console.WriteLine(timeZone);
+                }
+            }
 
         }
     }
