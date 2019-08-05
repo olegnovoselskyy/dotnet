@@ -47,6 +47,17 @@ namespace DatesAndTimes
                 }
             }
 
+            // DateTime.ParseExact if we know the how the format is provided
+            Console.WriteLine();
+            Console.WriteLine("DateTime.ParseExact if we know the how the format is provided:");
+            var date = "9/10/2019 10:00:00 PM";
+
+            var parsedDate = DateTime.ParseExact(date,
+                "M/d/yyyy h:mm:ss tt", 
+                CultureInfo.InvariantCulture);
+
+            Console.WriteLine(parsedDate);
+
         }
     }
 }
