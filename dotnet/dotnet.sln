@@ -25,6 +25,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpWorkingWithNulls", "C
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DatesAndTimesFundamentals", "DatesAndTimesFundamentals", "{BBAA1B70-03AC-4CF2-9BD5-298391E07282}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatesAndTimes", "DatesAndTimes\DatesAndTimes.csproj", "{DA8C1940-D841-4335-B210-5099DF1BAAFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{27EB2D36-99B7-4D30-BB94-7CAD5CE63413}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27EB2D36-99B7-4D30-BB94-7CAD5CE63413}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27EB2D36-99B7-4D30-BB94-7CAD5CE63413}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA8C1940-D841-4335-B210-5099DF1BAAFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA8C1940-D841-4335-B210-5099DF1BAAFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA8C1940-D841-4335-B210-5099DF1BAAFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA8C1940-D841-4335-B210-5099DF1BAAFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{E0FE276B-908E-4D88-84F9-44BFF8C34534} = {2B377A2A-3647-40E9-9A41-9B2E02F9B55F}
 		{B51E4CE7-3D5F-4B9D-9B7E-97A7004099D5} = {7FF567BA-8585-48CD-9734-44BEBE32E990}
 		{27EB2D36-99B7-4D30-BB94-7CAD5CE63413} = {2B377A2A-3647-40E9-9A41-9B2E02F9B55F}
+		{DA8C1940-D841-4335-B210-5099DF1BAAFF} = {BBAA1B70-03AC-4CF2-9BD5-298391E07282}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71828884-FF23-4B8E-A6B5-818365DE282A}
