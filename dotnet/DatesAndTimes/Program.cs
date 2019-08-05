@@ -94,6 +94,19 @@ namespace DatesAndTimes
 
             Console.WriteLine(_now.ToUniversalTime());
 
+            // Timespan calculation
+            Console.WriteLine();
+            Console.WriteLine("Timespan calculation:");
+            var timeSpan = new TimeSpan(60, 100, 200);
+
+            Console.WriteLine(timeSpan);
+            Console.WriteLine($"Days: { timeSpan.Days}");
+            Console.WriteLine($"Hours: { timeSpan.Hours}");
+            Console.WriteLine($"Minutes: { timeSpan.Minutes}");
+            Console.WriteLine($"Seconds: {timeSpan.Seconds}");
+
+
+
         }
     }
 }
