@@ -25,7 +25,7 @@ namespace DatesAndTimes
             }
 
             // return the week of our adjusted day
-            return calendar.GetWeekOfYear(time:, CalendarWeekRule.FirstFourDayWeek,
+            return calendar.GetWeekOfYear(_time, CalendarWeekRule.FirstFourDayWeek,
                 DayOfWeek.Monday);
         }
 
