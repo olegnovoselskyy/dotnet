@@ -104,6 +104,10 @@ namespace DatesAndTimes
             Console.WriteLine($"Hours: { timeSpan.Hours}");
             Console.WriteLine($"Minutes: { timeSpan.Minutes}");
             Console.WriteLine($"Seconds: {timeSpan.Seconds}");
+            Console.WriteLine($"Total Days: { timeSpan.TotalDays}");
+            Console.WriteLine($"Total Hours: { timeSpan.TotalHours}");
+            Console.WriteLine($"Total Minutes: { timeSpan.TotalMinutes}");
+            Console.WriteLine($"Total Seconds: {timeSpan.TotalSeconds}");
 
 
 
