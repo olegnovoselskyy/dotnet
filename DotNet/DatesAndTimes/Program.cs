@@ -18,6 +18,18 @@ namespace DatesAndTimes
 
                 Console.WriteLine(tradeDate.ToLongDateString());
             }
+
+            var flTime = DateTime.Now;
+            var saratovTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Saratov Standard Time");
+
+            var saratovTime = TimeZoneInfo.ConvertTime(flTime, saratovTimeZone);
+
+            Console.WriteLine(flTime);
+            Console.WriteLine(saratovTime);
+            //foreach (TimeZoneInfo z in TimeZoneInfo.GetSystemTimeZones())
+            //    Console.WriteLine(z.Id);
+
+           
         }
     }
 }
