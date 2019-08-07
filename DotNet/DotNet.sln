@@ -18,7 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{09F3FBA4-A
 		C:\Users\Oleg Novoselskyy\Downloads\02\demos\StockAnalyzer\StockData.csv = C:\Users\Oleg Novoselskyy\Downloads\02\demos\StockAnalyzer\StockData.csv
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatesAndTimes", "DatesAndTimes\DatesAndTimes.csproj", "{1999B358-3EF6-4D47-B7F0-79E398A0523C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatesAndTimes", "DatesAndTimes\DatesAndTimes.csproj", "{1999B358-3EF6-4D47-B7F0-79E398A0523C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQIntro", "LINQIntro\LINQIntro.csproj", "{B1F873BB-EAC6-4F6A-B1D5-8562CB5DE5F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -46,6 +48,10 @@ Global
 		{1999B358-3EF6-4D47-B7F0-79E398A0523C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1999B358-3EF6-4D47-B7F0-79E398A0523C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1999B358-3EF6-4D47-B7F0-79E398A0523C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1F873BB-EAC6-4F6A-B1D5-8562CB5DE5F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1F873BB-EAC6-4F6A-B1D5-8562CB5DE5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1F873BB-EAC6-4F6A-B1D5-8562CB5DE5F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1F873BB-EAC6-4F6A-B1D5-8562CB5DE5F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
