@@ -13,6 +13,9 @@ namespace Polygons
             var triangle = new Triangle(10);
             DisplayPolygon("Triangle", triangle);
 
+            var octagon = new Octagon(6);
+            DisplayPolygon("Octagon", octagon);
+
             Console.Read();
         }
 
