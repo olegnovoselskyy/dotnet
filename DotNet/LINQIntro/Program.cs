@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace LINQIntro
@@ -15,11 +16,19 @@ namespace LINQIntro
         {
             DirectoryInfo dir = new DirectoryInfo(path);
             var files = dir.GetFiles();
-
-            foreach (var file in files)
+            Array.Sort(files, new FileInfoCompare());
+            for (int i = 0; i < 5; i++)
             {
-                Console.WriteLine($"{file.Length}");
-            }
+                var file = files[i];
+                Console.WriteLine($"{file.Name} : {file.Length}");
+            } 
+        }
+    }
+    public class FileInfoCompare : IComparer<FileInfo>
+    {
+        public int Compare(FileInfo x, FileInfo y)
+        {
+            return y.Length.CompareTo(x.Length);
         }
     }
 }
