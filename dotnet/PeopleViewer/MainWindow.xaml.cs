@@ -16,7 +16,9 @@ namespace PeopleViewer
 
         private void ConcreteFetchButton_Click(object sender, RoutedEventArgs e)
         {
-
+            Person[] people = repository.GetPeople();
+            foreach (var person in people)
+                PersonListBox.Items.Add(person);
         }
 
         private void AbstractFetchButton_Click(object sender, RoutedEventArgs e)
