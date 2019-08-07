@@ -1,6 +1,6 @@
 ﻿namespace Polygons.Library
 {
-    public class Square : ConcreteRegularPolygon
+    public class Square : AbstractRegularPolygon
     {
         public Square(int length) :
             base(4, length)
