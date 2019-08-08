@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+//using Features.Linq;
 
 namespace Features
 {
@@ -10,7 +12,7 @@ namespace Features
             Employee[] developers = new Employee[]
             {
                 new Employee {Id = 1, Name="Dima"},
-                new Employee {Id = 1, Name="Dima"},
+                new Employee {Id = 1, Name="Oleg"},
             };
 
             List<Employee> sales = new List<Employee>()
