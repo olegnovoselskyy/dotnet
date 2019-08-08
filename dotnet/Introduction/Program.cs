@@ -22,10 +22,8 @@ namespace Introduction
 
         private static void ShowLargeFilesWithLinq(string path)
         {
-            var query = from file in new DirectoryInfo(path).GetFiles()
-                        orderby file.Length descending
-                        select file;
-            foreach(var file in query.Take(5))
+            var query = new DirectoryInfo(path).GetFiles().OrderByDescending(f => f.Length).Take(5);
+            foreach(var file in query)
             {
                 Console.WriteLine($"{file.Name,-20} - {file.Length,10:N0}");
             }
