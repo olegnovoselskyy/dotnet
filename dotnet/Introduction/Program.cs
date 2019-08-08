@@ -13,9 +13,22 @@ namespace Introduction
         {
             string path = @"C:\Program Files (x86)\Image-Line\FL Studio 20\Data\Patches\Packs\PACKS\various samples\random stuff and loops";
             ShowLargeFilesWithoutLinq(path);
+            Console.WriteLine("***");
+            ShowLargeFilesWithLinq(path);
 
             Console.Read();
 
+        }
+
+        private static void ShowLargeFilesWithLinq(string path)
+        {
+            var query = from file in new DirectoryInfo(path).GetFiles()
+                        orderby file.Length descending
+                        select file;
+            foreach(var file in query.Take(5))
+            {
+                Console.WriteLine($"{file.Name,-20} - {file.Length,10:N0}");
+            }
         }
 
         private static void ShowLargeFilesWithoutLinq(string path)
