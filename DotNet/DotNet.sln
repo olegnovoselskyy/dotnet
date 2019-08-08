@@ -22,6 +22,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatesAndTimes", "DatesAndTi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQIntro", "LINQIntro\LINQIntro.csproj", "{B1F873BB-EAC6-4F6A-B1D5-8562CB5DE5F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LINQFeatures", "LINQFeatures\LINQFeatures.csproj", "{CC2E43D4-399D-42EF-8FEE-18FC07AE5E8B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{B1F873BB-EAC6-4F6A-B1D5-8562CB5DE5F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1F873BB-EAC6-4F6A-B1D5-8562CB5DE5F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1F873BB-EAC6-4F6A-B1D5-8562CB5DE5F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC2E43D4-399D-42EF-8FEE-18FC07AE5E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC2E43D4-399D-42EF-8FEE-18FC07AE5E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC2E43D4-399D-42EF-8FEE-18FC07AE5E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC2E43D4-399D-42EF-8FEE-18FC07AE5E8B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
