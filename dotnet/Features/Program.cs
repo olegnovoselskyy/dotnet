@@ -21,6 +21,11 @@ namespace Features
             };
 
             Console.WriteLine(developers.Count());
+
+            foreach(var employee in developers.Where(e => e.Name.StartsWith("D")))
+            {
+                Console.WriteLine(employee.Name);
+            }
         }
     }
 }
