@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace LINQFeatures
 {
@@ -7,6 +8,7 @@ namespace LINQFeatures
     {
         static void Main(string[] args)
         {
+
             Employee[] developers = new Employee[]
             {
                 new Employee {EmployeeID = 1, Name = "Oleg Novo"},
@@ -18,12 +20,17 @@ namespace LINQFeatures
                 new Employee { EmployeeID = 3, Name = "Soyn Lytvyn"}
             };
 
-            Console.WriteLine(sales.Count);
+            //Console.WriteLine(sales.Count());
 
-            foreach (var dev in developers)
+            //foreach (var dev in developers)
+            //{
+            //    Console.WriteLine(dev.Name);
+            //}
+
+            foreach (var employee in developers.Where(x => x.Name.StartsWith('O')))
             {
-                Console.WriteLine(dev.Name);
-            }            
+                Console.WriteLine(employee.Name);
+            }
         }
     }
 }
