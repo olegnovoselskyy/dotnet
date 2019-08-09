@@ -26,20 +26,22 @@ namespace Features
 
             write(square(add(3, 5)));
 
-            Employee[] developers = new Employee[]
+            var developers = new Employee[]
             {
                 new Employee {Id = 1, Name="Dima"},
                 new Employee {Id = 2, Name="Oleg"},
             };
 
-            List<Employee> sales = new List<Employee>()
+            var sales = new List<Employee>()
             {
                 new Employee {Id = 3, Name="Alex"}
             };
 
             Console.WriteLine(developers.Count());
 
-            foreach(var employee in developers.Where(e => e.Name.Length == 4).OrderBy(e => e.Name))
+            var query = developers.Where(e => e.Name.Length == 4).OrderBy(e => e.Name);
+
+            foreach (var employee in query)
             {
                 Console.WriteLine(employee.Name);
             }
