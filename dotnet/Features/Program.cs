@@ -12,7 +12,7 @@ namespace Features
             Employee[] developers = new Employee[]
             {
                 new Employee {Id = 1, Name="Dima"},
-                new Employee {Id = 1, Name="Oleg"},
+                new Employee {Id = 2, Name="Oleg"},
             };
 
             List<Employee> sales = new List<Employee>()
