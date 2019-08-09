@@ -41,7 +41,17 @@ namespace Features
 
             var query = developers.Where(e => e.Name.Length == 4).OrderBy(e => e.Name);
 
+            var query2 = from employee in developers
+                         where employee.Name.Length == 4 && employee.Name.StartsWith("D")
+                         orderby employee.Name
+                         select employee;
+
             foreach (var employee in query)
+            {
+                Console.WriteLine(employee.Name);
+            }
+
+            foreach (var employee in query2)
             {
                 Console.WriteLine(employee.Name);
             }
