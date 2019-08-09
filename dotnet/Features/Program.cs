@@ -13,7 +13,14 @@ namespace Features
 
             Func<int, int, int> add = (x, y) => x + y;
 
+            Func<int, int, int> subtract = (x,y) => 
+            {
+                int temp = x - y;
+                return temp;
+            };
+
             Console.WriteLine(square(add(3, 5)));
+            Console.WriteLine(subtract(2, 1));
 
             Employee[] developers = new Employee[]
             {
