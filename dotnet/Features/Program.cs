@@ -39,7 +39,7 @@ namespace Features
 
             Console.WriteLine(developers.Count());
 
-            foreach(var employee in developers.Where(e => e.Name.StartsWith("D")))
+            foreach(var employee in developers.Where(e => e.Name.Length == 4).OrderBy(e => e.Name))
             {
                 Console.WriteLine(employee.Name);
             }
