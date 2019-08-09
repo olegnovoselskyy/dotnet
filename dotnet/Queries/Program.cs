@@ -16,7 +16,7 @@ namespace Queries
                 new Movie {Title = "Star Wars V", Rating = 8.7f, Year= 1980}
             };
 
-            var query = movies.Where(m => m.Year > 2000).Take(1);
+            var query = movies.Where(m => m.Year > 2000).ToList();
 
             Console.WriteLine(query.Count());
             var enumerator = query.GetEnumerator();
