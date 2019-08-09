@@ -19,8 +19,12 @@ namespace Features
                 return temp;
             };
 
-            Console.WriteLine(square(add(3, 5)));
+
             Console.WriteLine(subtract(2, 1));
+
+            Action<int> write = x => Console.WriteLine(x);
+
+            write(square(add(3, 5)));
 
             Employee[] developers = new Employee[]
             {
