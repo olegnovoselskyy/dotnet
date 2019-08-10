@@ -16,7 +16,7 @@ namespace Cars
 
             var query =
                 from car in cars
-                where car.Manufacturer == "BMW" && car.Year == 2016
+                where car.Manufacturer == "Audi" && car.Year == 2016
                 orderby car.Combined descending, car.Name ascending
                 select new
                 {
@@ -26,10 +26,11 @@ namespace Cars
                 };
 
 
+            var query2 = cars.OrderByDescending(c => c.Combined)
+                             .ThenBy(c => c.Name);
 
 
-
-                foreach (var car in query.Take(10))
+                foreach (var car in query2.Take(10))
                 {
                     Console.WriteLine($"{car.Manufacturer} {car.Name} : {car.Combined}");
                 }
