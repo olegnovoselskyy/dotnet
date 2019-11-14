@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Defense.BL
 {
-    class CustomerRepository
+    public class CustomerRepository
     {
+        public void Add(Customer customer)
+        {
+            // Add customer if one does not already exists.
+        }
     }
 }

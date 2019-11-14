@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Defense.BL;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,11 @@ namespace Defense
 
         private void button1_Click(object sender, EventArgs e)
         {
+            var customer = new Customer();
+            // Populate customer instance
 
+            var customerRepository = new CustomerRepository();
+            customerRepository.Add(customer);
         }
     }
 }
