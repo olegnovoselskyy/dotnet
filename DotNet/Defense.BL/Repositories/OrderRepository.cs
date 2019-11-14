@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Defense.BL
 {
-    class OrderRepository
+    public class OrderRepository
     {
+        public void Add(Order order)
+        {
+            // Adds a new order
+        }
     }
 }

@@ -23,8 +23,24 @@ namespace Defense
             var customer = new Customer();
             // Populate customer instance
 
+            var order = new Order();
+            // Populate order instance
+
+            var allowSplitOrders = true;
+
+            var payment = new Payment();
+            // Populate payment info from UI
+
             var customerRepository = new CustomerRepository();
             customerRepository.Add(customer);
+
+            var orderRepository = new OrderRepository();
+            orderRepository.Add(order);
+
+            var inventoryRepository = new InventoryRepository();
+            inventoryRepository.OrderItems(order, allowSplitOrders);
+
+            payment.ProccessPayment();
         }
     }
 }

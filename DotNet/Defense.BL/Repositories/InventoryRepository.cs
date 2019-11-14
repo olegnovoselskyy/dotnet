@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Defense.BL
 {
-    class InventoryRepository
+    public class InventoryRepository
     {
+        public void OrderItems(Order order, bool allowSplitOrders)
+        {
+            // Process order from inventory
+        }
     }
 }

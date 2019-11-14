@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Defense.BL
 {
-    class PaymentRepository
+    public class PaymentRepository
     {
     }
 }
