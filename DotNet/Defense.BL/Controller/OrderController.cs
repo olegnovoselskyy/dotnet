@@ -9,26 +9,34 @@ namespace Defense.BL
 {
     public class OrderController
     {
+        private CustomerRepository customerRepo { get; set; }
+        private OrderRepository orderRepo { get; set; }
+        private InventoryRepository inventoryRepo { get; set; }
+        private EmailLibrary emailLibrary { get; set; }
+
+        public OrderController()
+        {
+            customerRepo = new CustomerRepository();
+            orderRepo = new OrderRepository();
+            inventoryRepo = new InventoryRepository();
+            emailLibrary = new EmailLibrary();
+        }
+
         public void PlaceOrder(Customer customer, Order order, Payment payment, bool allowSplitOrders, bool emailReceipt)
         {
-            var customerRepository = new CustomerRepository();
-            customerRepository.Add(customer);
-
-            var orderRepository = new OrderRepository();
-            orderRepository.Add(order);
-
-            var inventoryRepository = new InventoryRepository();
-            inventoryRepository.OrderItems(order, allowSplitOrders);
+            customerRepo.Add(customer);
+            orderRepo.Add(order);
+            inventoryRepo.OrderItems(order, allowSplitOrders);
 
             payment.ProccessPayment();
 
             if (emailReceipt)
             {
                 customer.ValidateEmail(customer.Email);
-                customerRepository.Update();
+                customerRepo.Update();
 
-                var email = new EmailLibrary();
-                email.SendEmail(customer.Email.Length,
+
+                emailLibrary.SendEmail(customer.Email.Length,
                                 "Here is your receipt!");
             }
         }
