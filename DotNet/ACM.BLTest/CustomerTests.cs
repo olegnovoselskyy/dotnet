@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using ACM.BL;
+using System.Collections.Generic;
 
 namespace ACM.BLTest
 {
@@ -115,6 +116,45 @@ namespace ACM.BLTest
 
             //Assert
             Assert.Equal(expectedResult, actualResult);
+
+        }
+
+        [Fact]
+        public void CustomerAddressNotInit()
+        {
+
+            // Arrange
+            var customer = new Customer();
+
+            var list = new List<CustomerAddress>();
+            var home = new CustomerAddress();
+            var office = new CustomerAddress();
+
+            home.Street1 = "2535 Northfield Ln";
+            home.City = "Clearwater";
+            home.State = "FL";
+            home.Zip = "33761";
+            home.Country = "United States";
+            home.AddressType = "Home";
+
+            office.Street1 = "501 N Duval St";
+            office.City = "Tallahassee";
+            office.State = "FL";
+            office.Zip = "32303";
+            office.Country = "United States";
+            office.AddressType = "Office";
+
+            list.Add(home);
+            list.Add(office);
+
+            customer.AddressList = list;
+
+            // Assert 
+            var expectedResult = 2;
+
+            // Act
+
+            Assert.Equal(expectedResult, customer.AddressList.Count);
 
         }
     }

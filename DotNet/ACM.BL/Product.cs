@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ACM.BL
 {
-    public class Product
+    public class Product : EntityBase
     {
         #region Properties
 
