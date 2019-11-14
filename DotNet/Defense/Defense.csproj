@@ -84,6 +84,10 @@
       <Project>{20f251dd-bc85-4db0-a01f-2e91a2ebe251}</Project>
       <Name>Defense.BL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DefenseCommon\DefenseCommon.csproj">
+      <Project>{172df290-d762-4ef8-b5d8-b1dcb9a7492d}</Project>
+      <Name>DefenseCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

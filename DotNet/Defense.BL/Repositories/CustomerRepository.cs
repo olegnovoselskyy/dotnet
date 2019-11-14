@@ -12,5 +12,10 @@ namespace Defense.BL
         {
             // Add customer if one does not already exists.
         }
+
+        public void Update()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

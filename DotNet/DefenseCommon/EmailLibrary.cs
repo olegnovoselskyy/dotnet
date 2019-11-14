@@ -8,5 +8,9 @@ namespace DefenseCommon
 {
     public class EmailLibrary
     {
+        public void SendEmail(int length, string v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

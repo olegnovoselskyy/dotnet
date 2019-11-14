@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\OrderController.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Repositories\CustomerRepository.cs" />
     <Compile Include="Models\Inventory.cs" />
@@ -50,6 +51,12 @@
     <Compile Include="Models\Payment.cs" />
     <Compile Include="Repositories\PaymentRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DefenseCommon\DefenseCommon.csproj">
+      <Project>{172df290-d762-4ef8-b5d8-b1dcb9a7492d}</Project>
+      <Name>DefenseCommon</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

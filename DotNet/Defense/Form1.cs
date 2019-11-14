@@ -1,12 +1,5 @@
 ﻿using Defense.BL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Defense
@@ -20,6 +13,11 @@ namespace Defense
 
         private void button1_Click(object sender, EventArgs e)
         {
+            PlaceOrder();
+        }
+
+        private void PlaceOrder()
+        {
             var customer = new Customer();
             // Populate customer instance
 
@@ -27,20 +25,13 @@ namespace Defense
             // Populate order instance
 
             var allowSplitOrders = true;
+            var emailReceipt = true;
 
             var payment = new Payment();
             // Populate payment info from UI
 
-            var customerRepository = new CustomerRepository();
-            customerRepository.Add(customer);
-
-            var orderRepository = new OrderRepository();
-            orderRepository.Add(order);
-
-            var inventoryRepository = new InventoryRepository();
-            inventoryRepository.OrderItems(order, allowSplitOrders);
-
-            payment.ProccessPayment();
+            var orderController = new OrderController();
+            orderController.PlaceOrder(customer, order, payment, allowSplitOrders, emailReceipt);
         }
     }
 }
