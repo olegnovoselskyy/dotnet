@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{20F251DD-BC85-4DB0-A01F-2E91A2EBE251}</ProjectGuid>
+    <ProjectGuid>{172DF290-D762-4EF8-B5D8-B1DCB9A7492D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Defense.BL</RootNamespace>
-    <AssemblyName>Defense.BL</AssemblyName>
+    <RootNamespace>DefenseCommon</RootNamespace>
+    <AssemblyName>DefenseCommon</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,14 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Customer.cs" />
-    <Compile Include="Repositories\CustomerRepository.cs" />
-    <Compile Include="Models\Inventory.cs" />
-    <Compile Include="Repositories\InventoryRepository.cs" />
-    <Compile Include="Models\Order.cs" />
-    <Compile Include="Repositories\OrderRepository.cs" />
-    <Compile Include="Models\Payment.cs" />
-    <Compile Include="Repositories\PaymentRepository.cs" />
+    <Compile Include="EmailLibrary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
