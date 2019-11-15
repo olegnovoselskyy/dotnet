@@ -20,5 +20,10 @@ namespace Defense.BL
         {
             throw new NotImplementedException();
         }
+
+        public decimal CalculatePercentOfGoalSteps(string goal, string steps)
+        {
+            return (Convert.ToDecimal(steps) / Convert.ToDecimal(goal)) * 100;
+        }
     }
 }
