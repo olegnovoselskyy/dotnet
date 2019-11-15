@@ -22,7 +22,7 @@ namespace Defense
         {
             var customer = new Customer();
             var result = customer.CalculatePercentOfGoalSteps(GoalTextBox.Text, StepsTextBox.Text);
-            ResultLabel.Text = $"You reached {result}% of your goal!";
+            ResultLabel.Text = result;
             
         }
     }

@@ -21,9 +21,28 @@ namespace Defense.BL
             throw new NotImplementedException();
         }
 
-        public decimal CalculatePercentOfGoalSteps(string goal, string steps)
+        public string CalculatePercentOfGoalSteps(string goal, string steps)
         {
-            return (Convert.ToDecimal(steps) / Convert.ToDecimal(goal)) * 100;
+            string result;
+
+            if (Int32.TryParse(goal, out var g) && Int32.TryParse(steps, out var s))
+            {
+                if (g > 0)
+                {
+                    decimal calculation = (Convert.ToDecimal(s) / Convert.ToDecimal(g)) * 100;
+                    result = $"You have reached {calculation}% of your goal!";
+                }
+                else
+                {
+                    result = "Cannot divide by 0 or less than 0";
+                }
+            }
+            else
+            {
+                result = "Invalid parameters";
+            }
+
+            return result;
         }
     }
 }
