@@ -16,9 +16,22 @@ namespace Defense.BL
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public void ValidateEmail(string email)
+        public bool ValidateEmail(string email)
         {
-            throw new NotImplementedException();
+            var isValid = true;
+            var isValidFormat = true;
+            if (string.IsNullOrWhiteSpace(email))
+            {
+                isValid = false;
+            }
+
+            //RegEx for format of email
+            if (!isValidFormat)
+            {
+                isValid = false;
+            }
+
+            return isValid;
         }
 
         public string CalculatePercentOfGoalSteps(string goal, string steps)
