@@ -25,16 +25,16 @@ namespace Defense.BL
         {
             string result;
 
-            if (Int32.TryParse(goal, out var g) && Int32.TryParse(steps, out var s))
+            if (Decimal.TryParse(goal, out var g) && Decimal.TryParse(steps, out var s))
             {
                 if (g > 0)
                 {
-                    decimal calculation = (Convert.ToDecimal(s) / Convert.ToDecimal(g)) * 100;
+                    decimal calculation = CalculatePercentOfGoalSteps(g, s);
                     result = $"You have reached {calculation}% of your goal!";
                 }
                 else
                 {
-                    result = "Cannot divide by 0 or less than 0";
+                    result = "You have reached 0% of your goal!";
                 }
             }
             else
@@ -43,6 +43,11 @@ namespace Defense.BL
             }
 
             return result;
+        }
+
+        public decimal CalculatePercentOfGoalSteps(decimal goal, decimal steps)
+        {
+            return (steps / goal) * 100;
         }
     }
 }
