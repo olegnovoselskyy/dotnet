@@ -32,12 +32,12 @@ namespace Defense.BL
 
             if (emailReceipt)
             {
-                customer.ValidateEmail(customer.Email);
-                customerRepo.Update();
-
-
-                emailLibrary.SendEmail(customer.Email.Length,
-                                "Here is your receipt!");
+                if (customer.ValidateEmail(customer.Email))
+                {
+                    customerRepo.Update();
+                    emailLibrary.SendEmail(customer.Email.Length,
+                              "Here is your receipt!");
+                }              
             }
         }
     }

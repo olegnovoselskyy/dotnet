@@ -16,22 +16,31 @@ namespace Defense.BL
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public bool ValidateEmail(string email)
+        public void ValidateEmail(string email)
         {
-            var isValid = true;
             var isValidFormat = true;
+            var isRealDomain = true;
+
             if (string.IsNullOrWhiteSpace(email))
             {
-                isValid = false;
+                throw new ArgumentException("Email address is empty");
             }
 
             //RegEx for format of email
+
             if (!isValidFormat)
             {
-                isValid = false;
+                throw new ArgumentException("Email address is not valid");
             }
 
-            return isValid;
+            // Verify domain exists
+
+            if (!isValidFormat)
+            {
+                throw new ArgumentException("Email address does not include a valid domain");
+            }
+
+
         }
 
         public string CalculatePercentOfGoalSteps(string goal, string steps)
