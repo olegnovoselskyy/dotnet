@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Defense.BL
 {
-    class Order
+    public class Payment
     {
+        public void ProccessPayment()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
