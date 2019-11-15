@@ -32,7 +32,9 @@ namespace Defense.BL
 
             if (emailReceipt)
             {
-                if (customer.ValidateEmail(customer.Email))
+                string message;
+                var result = customer.ValidateEmail();
+                if (result.Item1 == true)
                 {
                     customerRepo.Update();
                     emailLibrary.SendEmail(customer.Email.Length,

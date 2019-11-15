@@ -16,30 +16,46 @@ namespace Defense.BL
         public string FirstName { get; set; }
         public string LastName { get; set; }
 
-        public void ValidateEmail(string email)
+        public Tuple<bool, string> ValidateEmail()
         {
+            Tuple<bool, string> result = Tuple.Create(true, "");
             var isValidFormat = true;
             var isRealDomain = true;
 
-            if (string.IsNullOrWhiteSpace(email))
+            if (string.IsNullOrWhiteSpace(Email))
             {
-                throw new ArgumentException("Email address is empty");
+                result = Tuple.Create(false, "Email address is empty");
+                //message = "Email address is empty";
+                //throw new ArgumentException("Email address is empty");
             }
 
-            //RegEx for format of email
-
-            if (!isValidFormat)
+            if (result.Item1 == true)
             {
-                throw new ArgumentException("Email address is not valid");
+                //RegEx for format of email
+
+                if (!isValidFormat)
+                {
+                    result = Tuple.Create(false, "Email address is empty");
+                    //isValid = false;
+                    //message = "Email address is not valid";
+                    //throw new ArgumentException("Email address is not valid");
+                }
             }
 
-            // Verify domain exists
-
-            if (!isValidFormat)
+            if (result.Item1 == true)
             {
-                throw new ArgumentException("Email address does not include a valid domain");
-            }
+                // Verify domain exists
 
+                if (!isRealDomain)
+                {
+                    result = Tuple.Create(false, "Email address is empty");
+                    //isValid = false;
+                    //message = "Email address does not include a valid domain";
+                    //throw new ArgumentException("Email address does not include a valid domain");
+                }
+            } 
+
+            return result;
 
         }
 
