@@ -67,9 +67,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharpErrorHandlingWithExce
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ConsoleCalculator", "ConsoleCalculator", "{981E081F-F939-4F79-9FF6-7DBF7D845395}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCalculator2", "ConsoleCalculator\ConsoleCalculator2.csproj", "{18BF8BD9-F4FC-4E95-977B-CB6638724D70}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catch", "ConsoleCalculator\Catch.csproj", "{18BF8BD9-F4FC-4E95-977B-CB6638724D70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCalculator1", "ConsoleCalculator2\ConsoleCalculator1.csproj", "{F9FB4715-F30A-40F5-9CD1-0C57236B1B16}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Throw", "ConsoleCalculator2\Throw.csproj", "{F9FB4715-F30A-40F5-9CD1-0C57236B1B16}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

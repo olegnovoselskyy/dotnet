@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Console;
 
-namespace ConsoleCalculator2
+namespace Catch
 {
     class Program
     {

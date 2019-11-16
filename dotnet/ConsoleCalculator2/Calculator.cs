@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ConsoleCalculator
+namespace Throw
 {
     public class Calculator
     {

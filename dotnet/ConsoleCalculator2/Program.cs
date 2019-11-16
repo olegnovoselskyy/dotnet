@@ -1,7 +1,7 @@
 ﻿using System;
 using static System.Console;
 
-namespace ConsoleCalculator
+namespace Throw
 {
     class Program
     {
