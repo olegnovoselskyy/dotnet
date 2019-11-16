@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PedometerWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PedometerWin.Designer.cs">
+      <DependentUpon>PedometerWin.cs</DependentUpon>
+    </Compile>
     <Compile Include="OrderWin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="PedometerWin.resx">
+      <DependentUpon>PedometerWin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderWin.resx">
       <DependentUpon>OrderWin.cs</DependentUpon>
     </EmbeddedResource>
