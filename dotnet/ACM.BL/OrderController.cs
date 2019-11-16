@@ -33,19 +33,22 @@ namespace ACM.BL
 
             inventoryRepository.OrderItems(order, allowSplitOrders);
 
-            payment.ProcessPayment(payment);
+            payment.ProcessPayment();
 
             if (emailReceipt)
             {
                 var result = customer.ValidateEmail();
                 if (result.Success)
                 {
-                    customerRepository.Update();
-
                     emailLibrary.SendEmail(customer.EmailAddress,
                                             "Here is your receipt");
                 }
+                else
+                {
+                    // log the messages
+                }
             }
+
         }
     }
 }
