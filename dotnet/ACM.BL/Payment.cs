@@ -6,7 +6,9 @@ using System.Text;
 
 namespace ACM.BL
 {
-
+    /// <summary>
+    /// Type of payments accepted by the system
+    /// </summary>
     public enum PaymentType
     {
         CreditCard = 1,
@@ -20,6 +22,9 @@ namespace ACM.BL
     {
         public int PaymentType { get; set; }
 
+        /// <summary>
+        /// Process a payment for an order
+        /// </summary>
         public void ProcessPayment()
         {
             PaymentType paymentTypeOption;

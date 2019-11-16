@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ACM.Library
+namespace Core.Common
 {
     public class OperationResult
     {

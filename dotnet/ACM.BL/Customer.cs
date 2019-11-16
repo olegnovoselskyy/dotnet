@@ -1,4 +1,4 @@
-﻿using ACM.Library;
+﻿using Core.Common;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,9 +23,6 @@ namespace ACM.BL
         /// <summary>
         /// Calculates the percent of the step goal reached.
         /// </summary>
-        /// <param name="goalSteps"></param>
-        /// <param name="actualSteps"></param>
-        /// <returns></returns>
         public decimal CalculatePercentOfGoalSteps(string goalSteps, string actualSteps)
         {
             // Try 3
@@ -42,19 +39,19 @@ namespace ACM.BL
             return CalculatePercentOfGoalSteps(goalStepCount, actualStepCount);
         }
 
+        /// <summary>
+        /// Calculates the percent of the step goal reached.
+        /// </summary>
         public decimal CalculatePercentOfGoalSteps(decimal goalStepCount, decimal actualStepCount)
         {
             if (goalStepCount <= 0) throw new ArgumentException("Goal must be greater than 0", "goalSteps");
             return Math.Round(actualStepCount / goalStepCount * 100, 2);
         }
 
-
-
-
-
-
-
-
+        /// <summary>
+        /// Validates the customer email address.
+        /// </summary>
+        /// <returns></returns>
         public OperationResult ValidateEmail()
         {
             var op = new OperationResult();

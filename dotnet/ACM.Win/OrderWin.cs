@@ -35,9 +35,19 @@ namespace ACM.Win
             // Populate the payment info from the UI
 
             var orderController = new OrderController();
-            orderController.PlaceOrder(customer, order, payment,
-                allowSplitOrders: false,
-                emailReceipt: true);
+
+            try
+            {
+                var op = orderController.PlaceOrder(customer, order, payment,
+                    allowSplitOrders: false,
+                    emailReceipt: true);
+            }
+            catch (ArgumentNullException ex)
+            {
+                // log the issue
+                // display a message to the user
+                // that the order was not successful
+            }
         }
 
     }

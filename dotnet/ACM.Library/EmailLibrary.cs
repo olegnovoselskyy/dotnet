@@ -8,10 +8,18 @@ namespace Core.Common
 {
     public class EmailLibrary
     {
-        public void SendEmail(string p1, string p2)
+        public void SendEmail(string emailAddress, string message)
         {
             // If a valid email address is provided,
-            // Send an email.
+            try
+            {
+                // Send an email.
+            }
+            catch (InvalidOperationException ex)
+            {
+                // log
+                throw;
+            }
         }
     }
 }
