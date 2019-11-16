@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Catch", "ConsoleCalculator\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Throw", "ConsoleCalculator2\Throw.csproj", "{F9FB4715-F30A-40F5-9CD1-0C57236B1B16}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Finally", "Finally\Finally.csproj", "{4DEAE1A4-D1E2-4DC6-8AD5-973E3561FA47}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -165,6 +167,10 @@ Global
 		{F9FB4715-F30A-40F5-9CD1-0C57236B1B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F9FB4715-F30A-40F5-9CD1-0C57236B1B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F9FB4715-F30A-40F5-9CD1-0C57236B1B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DEAE1A4-D1E2-4DC6-8AD5-973E3561FA47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEAE1A4-D1E2-4DC6-8AD5-973E3561FA47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEAE1A4-D1E2-4DC6-8AD5-973E3561FA47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEAE1A4-D1E2-4DC6-8AD5-973E3561FA47}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -196,6 +202,7 @@ Global
 		{981E081F-F939-4F79-9FF6-7DBF7D845395} = {30745F97-EDBE-4245-8543-BC83633B2CCF}
 		{18BF8BD9-F4FC-4E95-977B-CB6638724D70} = {981E081F-F939-4F79-9FF6-7DBF7D845395}
 		{F9FB4715-F30A-40F5-9CD1-0C57236B1B16} = {981E081F-F939-4F79-9FF6-7DBF7D845395}
+		{4DEAE1A4-D1E2-4DC6-8AD5-973E3561FA47} = {981E081F-F939-4F79-9FF6-7DBF7D845395}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {71828884-FF23-4B8E-A6B5-818365DE282A}
