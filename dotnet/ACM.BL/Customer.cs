@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ACM.Library;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -33,8 +34,8 @@ namespace ACM.BL
 
             if (string.IsNullOrWhiteSpace(goalSteps)) throw new ArgumentException("Goal must be entered", "goalSteps");
             if (string.IsNullOrWhiteSpace(actualSteps)) throw new ArgumentException("Actual steps count must be entered", "actualSteps");
-
-            if (!decimal.TryParse(goalSteps, out goalStepCount)) throw new ArgumentException("Goal must be numeric", "goalSteps");
+ 
+            if (!decimal.TryParse(goalSteps, out goalStepCount)) throw new ArgumentException("Goal must be numeric");
             if (!decimal.TryParse(actualSteps, out actualStepCount)) throw new ArgumentException("Actual steps must be numeric", "actualSteps");
 
             return CalculatePercentOfGoalSteps(goalStepCount, actualStepCount);
@@ -47,14 +48,45 @@ namespace ACM.BL
         }
 
 
-        public void ValidateEmail()
+
+
+
+
+
+
+        public OperationResult ValidateEmail()
         {
-            // -- Send an email receipt --
-            // If the user requested a receipt
-            // Get the customer data
-            // Ensure a valid email address was provided.
-            // If not,
-            // request an email address from the user.
+            var op = new OperationResult();
+
+            if (string.IsNullOrWhiteSpace(this.EmailAddress))
+            {
+                op.Success = false;
+                op.AddMessage("Email address is null");
+            }
+
+            if (op.Success)
+            {
+                var isValidFormat = true;
+                // Code here that validates the format of the email
+                // using Regular Expressions.
+                if (!isValidFormat)
+                {
+                    op.Success = false;
+                    op.AddMessage("Email address is not in a correct format");
+                }
+            }
+
+            if (op.Success)
+            {
+                var isRealDomain = true;
+                // Code here that confirms whether domain exists.
+                if (!isRealDomain)
+                {
+                    op.Success = false;
+                    op.AddMessage("Email address does not include a valid domain");
+                }
+            }
+            return op;
         }
     }
 }
