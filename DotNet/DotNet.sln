@@ -36,6 +36,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defense.BLTest", "Defense.B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods.Tests", "ExtensionMethods.Tests\ExtensionMethods.Tests.csproj", "{66CD5A40-9181-4533-AAC6-ED1EF813D59A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{13DF1DC3-0277-4110-8943-0AAF4145CA0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{CFD4E43D-9665-433E-A4FF-3B031B9D9976}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -94,6 +98,10 @@ Global
 		{66CD5A40-9181-4533-AAC6-ED1EF813D59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{66CD5A40-9181-4533-AAC6-ED1EF813D59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{66CD5A40-9181-4533-AAC6-ED1EF813D59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFD4E43D-9665-433E-A4FF-3B031B9D9976}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFD4E43D-9665-433E-A4FF-3B031B9D9976}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFD4E43D-9665-433E-A4FF-3B031B9D9976}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFD4E43D-9665-433E-A4FF-3B031B9D9976}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -102,6 +110,7 @@ Global
 		{F3707058-FD18-474F-920C-B0303060D563} = {A21738A6-5076-4A31-8230-E75F4DAD1E0A}
 		{FA6D1523-11CF-493A-A073-6AD47B7924EF} = {A21738A6-5076-4A31-8230-E75F4DAD1E0A}
 		{66CD5A40-9181-4533-AAC6-ED1EF813D59A} = {A21738A6-5076-4A31-8230-E75F4DAD1E0A}
+		{CFD4E43D-9665-433E-A4FF-3B031B9D9976} = {13DF1DC3-0277-4110-8943-0AAF4145CA0F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9E18B7B-AF08-43D9-BCC3-6973C837633B}

@@ -17,6 +17,9 @@ namespace ExtensionMethods.Tests
         public void Count()
         {
             Assert.AreEqual(3, _strings.Count());
+
+            var stringExt = new StringExtension();
+            Assert.AreEqual(0, stringExt.Count());
         }
     }
 }
