@@ -97,7 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConfigurationExtensions.cs" />
-    <Compile Include="TargetExtension.cs" />
+    <Compile Include="TargetExtensions.cs" />
     <Compile Include="Target.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
