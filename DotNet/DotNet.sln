@@ -34,11 +34,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefenseCommon", "DefenseCom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Defense.BLTest", "Defense.BLTest\Defense.BLTest.csproj", "{FA6D1523-11CF-493A-A073-6AD47B7924EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods.Tests", "ExtensionMethods.Tests\ExtensionMethods.Tests.csproj", "{66CD5A40-9181-4533-AAC6-ED1EF813D59A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionMethods.Tests", "ExtensionMethods.Tests\ExtensionMethods.Tests.csproj", "{66CD5A40-9181-4533-AAC6-ED1EF813D59A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{13DF1DC3-0277-4110-8943-0AAF4145CA0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{CFD4E43D-9665-433E-A4FF-3B031B9D9976}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExtensionMethods", "ExtensionMethods\ExtensionMethods.csproj", "{CFD4E43D-9665-433E-A4FF-3B031B9D9976}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OdeToFood.Web", "OdeToFood.Web\OdeToFood.Web.csproj", "{78C35130-4A8B-45B0-9CF1-9B94B05AF577}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,6 +104,10 @@ Global
 		{CFD4E43D-9665-433E-A4FF-3B031B9D9976}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CFD4E43D-9665-433E-A4FF-3B031B9D9976}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CFD4E43D-9665-433E-A4FF-3B031B9D9976}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78C35130-4A8B-45B0-9CF1-9B94B05AF577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78C35130-4A8B-45B0-9CF1-9B94B05AF577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78C35130-4A8B-45B0-9CF1-9B94B05AF577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78C35130-4A8B-45B0-9CF1-9B94B05AF577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
