@@ -10,6 +10,6 @@ namespace OdeToFood.Data.Models
     {
         public int RestaurantID { get; set; }
         public string RestaurantName { get; set; }
-        public string CuisineType { get; set; }
+        public CuisineType CuisineType { get; set; }
     }
 }
