@@ -1,8 +1,27 @@
-﻿@{
+﻿@model IEnumerable<OdeToFood.Data.Models.Restaurant>
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
     <h1>ASP.NET Testing Final</h1>
-    <div>There are @Enumerable.Count(Model) restaurants in the db.</div>
+    <div>There are @Model.Count() restaurants in the db.</div>
+</div>
+
+
+<div class="container">
+    @foreach (var restaurant in Model.OrderBy(m => m.RestaurantID))
+    {
+    <div class="row">
+        <div class="col-md-4">
+            <strong>ID:</strong> @restaurant.RestaurantID
+        </div>
+        <div class="col-md-4">
+            <strong>Name:</strong> @restaurant.RestaurantName
+        </div>
+        <div class="col-md-4">
+            <strong>Type: </strong> @restaurant.CuisineType
+        </div>
+    </div>
+    }
 </div>
