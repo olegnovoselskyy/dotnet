@@ -1,6 +1,7 @@
 ﻿using OdeToFood.Data.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace OdeToFood.Data.Services
 {
@@ -22,7 +23,7 @@ namespace OdeToFood.Data.Services
 
         public IEnumerable<Restaurant> GetAll()
         {
-            throw new NotImplementedException();
+            return restaurants.OrderBy(r => r.RestaurantName);
         }
     }
 }
