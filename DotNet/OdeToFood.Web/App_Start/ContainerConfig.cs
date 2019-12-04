@@ -18,6 +18,7 @@ namespace OdeToFood.Web
             var builder = new ContainerBuilder();
 
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
+            builder.RegisterApiControllers(typeof(MvcApplication).Assembly);
             builder.RegisterType<InMemoryRestaurantData>()
                 .As<IRestaurantData>()
                 .SingleInstance();
