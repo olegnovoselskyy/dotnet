@@ -66,9 +66,29 @@ namespace OdeToFood.Web.Controllers
         }
 
         [HttpGet]
-        public ActionResult Edit()
+        public ActionResult Edit(int id)
         {
-            return View();
+            var model = db.Get(id);
+            if (model != null)
+            {
+                return View(model);
+            }
+            return View("Error");
+
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(Restaurant restaurant)
+        {
+
+            if (ModelState.IsValid)
+            {
+                db.Update(restaurant);
+                return RedirectToAction("Details", new { id = restaurant.RestaurantID });
+            }
+
+            return View(restaurant);
         }
     }
 }

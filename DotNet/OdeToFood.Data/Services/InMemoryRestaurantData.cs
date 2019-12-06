@@ -42,5 +42,15 @@ namespace OdeToFood.Data.Services
         {
             return restaurants.OrderBy(r => r.RestaurantName);
         }
+
+        public void Update(Restaurant restaurant)
+        {
+            var update = Get(restaurant.RestaurantID);
+            if (update != null)
+            {
+                update.RestaurantName = restaurant.RestaurantName;
+                update.CuisineType = restaurant.CuisineType;
+            }
+        }
     }
 }
