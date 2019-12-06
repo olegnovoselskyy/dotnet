@@ -13,6 +13,7 @@ namespace OdeToFood.Data.Models
 
         [Required(ErrorMessage = "Name is required")]
         [Display(Name = "Restaurant Name")]
+        [MaxLength(255)]
         public string RestaurantName { get; set; }
 
         [Display(Name = "Cuisine")]
