@@ -26,7 +26,9 @@ namespace OdeToFood.Data.Services
 
         public void Delete(int id)
         {
-            throw new NotImplementedException();
+            var restaurant = db.Restaurants.Find(id);
+            db.Restaurants.Remove(restaurant);
+            db.SaveChanges();
         }
 
         public Restaurant Get(int id)
