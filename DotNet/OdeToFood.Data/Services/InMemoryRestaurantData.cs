@@ -21,9 +21,36 @@ namespace OdeToFood.Data.Services
             };
         }
 
+        public void Add(Restaurant restaurant)
+        {
+            restaurants.Add(restaurant);
+            restaurant.RestaurantID = restaurants.Max(r => r.RestaurantID) + 1;
+        }
+
+        public void Delete(int id)
+        {
+            var remove = restaurants.Single(r => r.RestaurantID == id);
+            restaurants.Remove(remove);
+        }
+
+        public Restaurant Get(int id)
+        {
+            return restaurants.FirstOrDefault(r => r.RestaurantID == id);
+        }
+
         public IEnumerable<Restaurant> GetAll()
         {
             return restaurants.OrderBy(r => r.RestaurantName);
+        }
+
+        public void Update(Restaurant restaurant)
+        {
+            var update = Get(restaurant.RestaurantID);
+            if (update != null)
+            {
+                update.RestaurantName = restaurant.RestaurantName;
+                update.CuisineType = restaurant.CuisineType;
+            }
         }
     }
 }
