@@ -44,22 +44,30 @@ namespace OdeToFood.Web.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Delete(int id)
+        {
+            db.Delete(id);
+            return RedirectToAction("Index");
+        }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Restaurant restaurant)
         {
-            if (string.IsNullOrEmpty(restaurant.RestaurantName))
-            {
-                ModelState.AddModelError(nameof(restaurant.RestaurantName), "Name cannot be empty");
-            }
-
 
             if (ModelState.IsValid)
             {
                 db.Add(restaurant);
-                return View();
+                return RedirectToAction("Details", new { id = restaurant.RestaurantID });
             }
 
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Edit()
+        {
             return View();
         }
     }

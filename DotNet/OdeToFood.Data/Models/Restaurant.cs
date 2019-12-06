@@ -11,6 +11,7 @@ namespace OdeToFood.Data.Models
     {
         public int RestaurantID { get; set; }
 
+        [Required(ErrorMessage = "Name is required")]
         [Display(Name = "Restaurant Name")]
         public string RestaurantName { get; set; }
 
